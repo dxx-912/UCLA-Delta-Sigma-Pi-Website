@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #16161c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Scroll-reveal: only hides content when JS is present AND motion is allowed,
+   so no-JS and reduced-motion users always see every section. */
+@media (prefers-reduced-motion: no-preference) {
+  html.js .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
+    will-change: opacity, transform;
+  }
+  html.js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Diagonal-hatch placeholder styling shared by every image placeholder */
+.placeholder-box {
+  background-color: #d8d6d1;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.045),
+    rgba(0, 0, 0, 0.045) 10px,
+    rgba(0, 0, 0, 0) 10px,
+    rgba(0, 0, 0, 0) 20px
+  );
+  color: #6b6862;
+}
