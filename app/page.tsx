@@ -165,13 +165,21 @@ export default function HomePage() {
             </h2>
           </Reveal>
 
-          <div className="mt-16 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-6">
             {logoCategories.map((category, i) => (
-              <Reveal key={category.label} delay={i * 0.05}>
+              <Reveal
+                key={category.label}
+                delay={i * 0.05}
+                className={category.columns === 2 ? "lg:col-span-2" : "lg:col-span-1"}
+              >
                 <h3 className="border-b border-white/15 pb-3 font-display text-xs font-bold uppercase tracking-[0.14em] text-white/70">
                   {category.label}
                 </h3>
-                <div className="mt-6 grid grid-cols-3 gap-x-4 gap-y-5">
+                <div
+                  className={`mt-6 grid grid-flow-col grid-rows-[repeat(13,minmax(0,1fr))] gap-x-4 gap-y-5 ${
+                    category.columns === 2 ? "grid-cols-2" : "grid-cols-1"
+                  }`}
+                >
                   {category.companies.map((company) => (
                     <CompanyLogo key={company.name} {...company} />
                   ))}

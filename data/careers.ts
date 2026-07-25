@@ -94,6 +94,13 @@ export const industries: IndustrySection[] = [
       "SAP",
       "Robinhood",
       "CrowdStrike",
+      "Okta",
+      "Atlassian",
+      "Cisco",
+      "Instagram",
+      "Redfin",
+      "Applied Intuition",
+      "MathWorks",
     ],
   },
   {
@@ -111,6 +118,9 @@ export const industries: IndustrySection[] = [
       "NBC",
       "Warner Music Group",
       "William Morris Endeavor",
+      "Sony Pictures",
+      "Universal Music Group",
+      "MGM Studios",
     ],
   },
 ];

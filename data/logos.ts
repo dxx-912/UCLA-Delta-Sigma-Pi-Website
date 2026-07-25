@@ -1,6 +1,7 @@
 // Homepage "We send our brothers to..." logo spread — the company lists from the
-// Careers Overview page (data/careers.ts), regrouped into the five columns the
-// spread displays and extended with companies that recur in our offers history.
+// Careers Overview page (data/careers.ts), regrouped into the four categories the
+// spread displays (Investment Banking & Private Equity merged into one two-column
+// category) and extended with companies that recur in our offers history.
 //
 // Logos are placeholders until real files exist (see Section 6 / CLAUDE.md). Set
 // `src` on an entry to swap in a real asset — `components/CompanyLogo.tsx` then
@@ -15,6 +16,13 @@ export interface Company {
 
 export interface LogoCategory {
   label: string;
+  /**
+   * Number of side-by-side columns this category renders as (1 or 2). Company
+   * order is column-major — the first `companies.length / columns` entries
+   * fill column A top-to-bottom, the rest fill column B — so each column reads
+   * as an even 13-row block (see the outer 6-column grid in app/page.tsx).
+   */
+  columns: 1 | 2;
   companies: Company[];
 }
 
@@ -24,8 +32,10 @@ export const logoSpreadHeadline = "We send our brothers to...";
 
 export const logoCategories: LogoCategory[] = [
   {
-    label: "Investment Banking",
+    label: "Investment Banking & Private Equity",
+    columns: 2,
     companies: names(
+      // Column A
       "Goldman Sachs",
       "Morgan Stanley",
       "J.P. Morgan",
@@ -39,6 +49,7 @@ export const logoCategories: LogoCategory[] = [
       "Santander",
       "Macquarie",
       "BNY Mellon",
+      // Column B
       "Evercore",
       "Lazard",
       "Moelis & Company",
@@ -47,11 +58,6 @@ export const logoCategories: LogoCategory[] = [
       "Qatalyst Partners",
       "Rothschild & Co.",
       "Capital One",
-    ),
-  },
-  {
-    label: "Private Equity",
-    companies: names(
       "Blackstone",
       "KKR & Co.",
       "Oaktree Capital Management",
@@ -61,7 +67,9 @@ export const logoCategories: LogoCategory[] = [
   },
   {
     label: "Technology",
+    columns: 2,
     companies: names(
+      // Column A
       "Google",
       "Meta",
       "Apple",
@@ -75,16 +83,25 @@ export const logoCategories: LogoCategory[] = [
       "Tesla",
       "Uber",
       "Snapchat",
+      // Column B
       "TikTok",
       "Twitter",
       "Databricks",
       "Snowflake",
       "Robinhood",
       "CrowdStrike",
+      "Okta",
+      "Atlassian",
+      "Cisco",
+      "Instagram",
+      "Redfin",
+      "Applied Intuition",
+      "MathWorks",
     ),
   },
   {
     label: "Consulting",
+    columns: 1,
     companies: names(
       "McKinsey & Company",
       "BCG",
@@ -103,6 +120,7 @@ export const logoCategories: LogoCategory[] = [
   },
   {
     label: "Entertainment & Marketing",
+    columns: 1,
     companies: names(
       "Disney",
       "Warner Bros.",
@@ -114,6 +132,9 @@ export const logoCategories: LogoCategory[] = [
       "Hulu",
       "Warner Music Group",
       "William Morris Endeavor",
+      "Sony Pictures",
+      "Universal Music Group",
+      "MGM Studios",
     ),
   },
 ];
