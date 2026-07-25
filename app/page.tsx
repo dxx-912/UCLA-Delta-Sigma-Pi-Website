@@ -3,6 +3,9 @@ import Placeholder from "@/components/Placeholder";
 import Reveal from "@/components/Reveal";
 import CountUp from "@/components/CountUp";
 import Carousel from "@/components/Carousel";
+import HeroVideo from "@/components/HeroVideo";
+import CompanyLogo from "@/components/CompanyLogo";
+import { logoCategories, logoSpreadHeadline } from "@/data/logos";
 
 const stats = [
   {
@@ -26,16 +29,19 @@ const stats = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative isolate flex min-h-[560px] items-center overflow-hidden bg-charcoal text-white lg:min-h-[640px]">
-        <Placeholder
-          label="Hero photo (Downtown Los Angeles)"
-          className="absolute inset-0 h-full w-full"
+      {/* Hero — LA skyline timelapse behind a dark scrim.
+          Height fills the viewport below the 72px sticky nav, with a floor so
+          short/landscape viewports still give the video room to breathe. */}
+      <section className="relative isolate flex min-h-[max(560px,calc(100svh-72px))] items-center overflow-hidden bg-charcoal text-white">
+        <HeroVideo
+          src="/Assets/la-skyline.mp4"
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
         />
+        {/* Flat scrim keeps the headline legible over the brightest frames... */}
         <div className="absolute inset-0 bg-black/55" />
-        <span className="absolute bottom-3 right-3 z-10 rounded bg-black/60 px-2 py-1 text-[10px] font-medium tracking-wide text-white/80">
-          Placeholder: Hero photo
-        </span>
+        {/* ...and this gradient melts the top and bottom edges into the
+            charcoal nav above and stats section below. */}
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal/25 to-charcoal" />
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 lg:px-10">
           <div className="max-w-xl">
             <h1 className="font-display text-4xl font-bold leading-tight sm:text-5xl">
@@ -147,6 +153,41 @@ export default function HomePage() {
               />
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* We send our brothers to... — logo spread, grouped by industry */}
+      <section className="bg-charcoal py-24 text-white">
+        <div className="mx-auto max-w-[1200px] px-6">
+          <Reveal>
+            <h2 className="text-center font-display text-3xl font-bold sm:text-4xl">
+              {logoSpreadHeadline}
+            </h2>
+          </Reveal>
+
+          <div className="mt-16 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {logoCategories.map((category, i) => (
+              <Reveal key={category.label} delay={i * 0.05}>
+                <h3 className="border-b border-white/15 pb-3 font-display text-xs font-bold uppercase tracking-[0.14em] text-white/70">
+                  {category.label}
+                </h3>
+                <div className="mt-6 grid grid-cols-3 gap-x-4 gap-y-5">
+                  {category.companies.map((company) => (
+                    <CompanyLogo key={company.name} {...company} />
+                  ))}
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal className="mt-16 text-center">
+            <Link
+              href="/careers"
+              className="inline-block bg-white px-8 py-3 text-sm font-medium text-charcoal transition-transform hover:-translate-y-0.5"
+            >
+              Check Out Our Offers by Year
+            </Link>
+          </Reveal>
         </div>
       </section>
 

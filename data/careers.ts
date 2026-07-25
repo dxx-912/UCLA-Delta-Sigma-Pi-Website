@@ -34,6 +34,19 @@ export const industries: IndustrySection[] = [
       "Houlihan Lokey",
       "Moelis & Company",
       "Blackstone",
+      "Credit Suisse",
+      "Wells Fargo",
+      "RBC Capital Markets",
+      "Santander",
+      "Macquarie",
+      "BNY Mellon",
+      // Private equity and asset management. Grouped here rather than in their own
+      // section, following the existing placement of Blackstone above; the homepage
+      // spread breaks them out into a dedicated "Private Equity" column.
+      "KKR & Co.",
+      "Oaktree Capital Management",
+      "Ares Management",
+      "Vista Equity Partners",
     ],
   },
   {
@@ -51,6 +64,9 @@ export const industries: IndustrySection[] = [
       "Accenture",
       "PwC",
       "KPMG",
+      "Booz Allen Hamilton",
+      "ZS Associates",
+      "Roland Berger",
     ],
   },
   {
@@ -71,6 +87,13 @@ export const industries: IndustrySection[] = [
       "Salesforce",
       "TikTok",
       "Google",
+      "Databricks",
+      "Snowflake",
+      "Adobe",
+      "Oracle",
+      "SAP",
+      "Robinhood",
+      "CrowdStrike",
     ],
   },
   {
@@ -86,6 +109,8 @@ export const industries: IndustrySection[] = [
       "Lionsgate",
       "Warner Bros.",
       "NBC",
+      "Warner Music Group",
+      "William Morris Endeavor",
     ],
   },
 ];
