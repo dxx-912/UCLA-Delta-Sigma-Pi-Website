@@ -125,6 +125,7 @@ const LOGO_FILES: string[] = [
   "ubs.svg",
   "universal-music-group.svg",
   "universal-pictures.png",
+  "verizon.png",
   "vista-equity-partners.svg",
   "warner-bros.svg",
   "warner-music-group.svg",
