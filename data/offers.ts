@@ -44,6 +44,68 @@ function group(
 }
 
 export const offers: OfferRecord[] = [
+  // ─────────────────────────────── 2025–2026 ───────────────────────────────
+  ...group("2025–2026", "Investment Banking", "Full-Time", [
+    ["Tarini Pisharodi", "Goldman Sachs"],
+    ["Ramona Pyke", "J.P. Morgan"],
+    ["Eric Amkraut", "Perella Weinberg Partners"],
+    ["William Lenkowitz", "JLL"],
+    ["Ethan Lee", "Pathway Capital"],
+    ["Peggy Liu", "Guggenheim Securities"],
+  ]),
+  ...group("2025–2026", "Investment Banking", "Internship", [
+    ["Yuji Fukuda", "Goldman Sachs"],
+    ["Ryan Chao", "J.P. Morgan"],
+    ["Aaron Knibbe", "Morgan Stanley"],
+    ["Dome Srithong", "Morgan Stanley"],
+    ["Nikolas Marmershteyn", "Wells Fargo"],
+    ["Jeffrey Chang", "Capital One"],
+    ["Apurv Gupta", "Perella Weinberg Partners"],
+    ["Jun Moon", "Federal Reserve of Boston"],
+    ["Aaron Teng", "UBS"],
+  ]),
+  // No full-time entries this year — the source lists internships only.
+  ...group("2025–2026", "Technology", "Internship", [
+    ["Aarnav Yedla", "Capital One, Software Engineering"],
+    ["Alain Izawa", "Amazon, Product Management"],
+    ["Hugo Hiramatsu", "Smartsheet, Product Management"],
+    ["Melissa Shi", "IBM, Associate Consultant"],
+    ["Yuvraj Chadha", "IBM, Business Technology"],
+    ["Sara Tatke", "Adobe, Consulting"],
+    ["Neha Kondeti", "Robinhood"],
+  ]),
+  ...group("2025–2026", "Consulting", "Full-Time", [
+    ["Iain Han", "L.E.K. Consulting (Los Angeles)"],
+    ["Sam Oh", "Strategy& (New York)"],
+    ["Ashley Chan", "Bain & Company"],
+  ]),
+  ...group("2025–2026", "Consulting", "Internship", [
+    ["Hayden Selvakumar", "Accenture"],
+    ["Cameron Loh", "Kaiser Permanente"],
+    ["Kiera Wang", "Deloitte"],
+  ]),
+  ...group("2025–2026", "Music and Entertainment", "Full-Time", [
+    ["Simone Yu", "TikTok"],
+  ]),
+  ...group("2025–2026", "Music and Entertainment", "Internship", [
+    ["Kayla Kim", "Paramount"],
+    ["Dlency Zheng", "Paramount"],
+    ["Veronica Yang", "Corsair"],
+    ["Shelley Weng", "Wasserman"],
+  ]),
+  ...group("2025–2026", "Other", "Full-Time", [
+    ["Nikhil Mummalaneni", "Private Equity, General Atlantic"],
+  ]),
+  ...group("2025–2026", "Other", "Internship", [
+    ["Rebecca Chang", "Analytics, AlphaSights"],
+    ["Nikhil Vijay", "Venture Capital, Z5 Capital"],
+    ["Dylan Loh", "Aerospace Defence, Northrop Grumman"],
+    ["Aidan Choi", "Real Estate, Eastdil Secured"],
+    ["Paul Thomsak", "Insurance, MetLife"],
+    ["Brenda Nguyen", "Real Estate, CIM Securities"],
+    ["Evan Hsu", "Tax Accounting, BDO"],
+  ]),
+
   // ─────────────────────────────── 2024–2025 ───────────────────────────────
   ...group("2024–2025", "Investment Banking", "Full-Time", [
     ["Adithi Balasubramanian", "Goldman Sachs (Los Angeles)"],
@@ -60,10 +122,10 @@ export const offers: OfferRecord[] = [
     ["Eric Amkraut", "Perella Weinberg Partners"],
     ["Hayden Selvakumar", "Intuit"],
     ["Nikhil Mummalaneni", "Sixth Street"],
-    ["Nikolas Marmerschteyn", "Live Nation"],
-    ["Peggy Liu", "Guggenheim"],
+    ["Nikolas Marmershteyn", "Live Nation"],
+    ["Peggy Liu", "Guggenheim Securities"],
     ["Ramona Pyke", "Wells Fargo"],
-    ["Tarini Pisharody", "Goldman Sachs"],
+    ["Tarini Pisharodi", "Goldman Sachs"],
     ["William Lenkowitz", "JLL"],
   ]),
   ...group("2024–2025", "Technology", "Internship", [
@@ -77,7 +139,7 @@ export const offers: OfferRecord[] = [
     ["Veronica Yang", "ASUS, Product Marketing"],
   ]),
   ...group("2024–2025", "Consulting", "Full-Time", [
-    ["Iain Han", "L.E.K Consulting (Los Angeles)"],
+    ["Iain Han", "L.E.K. Consulting (Los Angeles)"],
     ["Mandy Lu", "PwC"],
     ["Sam Kao", "Bain & Company"],
     ["Sam Oh", "Strategy& (New York)"],
@@ -105,7 +167,7 @@ export const offers: OfferRecord[] = [
     ["Ian Zhang", "Santander (Los Angeles)"],
     ["Kevin Zheng", "Evercore (Menlo Park)"],
     ["Megan Yu", "PJT Partners (New York)"],
-    ["Tarini Pisharody", "TAP Advisors (New York)"],
+    ["Tarini Pisharodi", "TAP Advisors (New York)"],
     ["Tej Bains", "Deloitte (Los Angeles)"],
     ["William Lee", "Moelis & Company (Los Angeles)"],
   ]),
@@ -118,10 +180,10 @@ export const offers: OfferRecord[] = [
   ]),
   ...group("2023–2024", "Technology", "Internship", [
     ["Benjamin Watson", "Cisco, Business Analytics"],
-    ["Gavin Wong", "Atlassian, Software Engineering Intern"],
+    ["Gavin Wong", "Atlassian, Software Engineering"],
     ["Katherine Fong", "NetApp, Product Marketing"],
-    ["Kunal Patil", "Verkada, Software Engineering Intern"],
-    ["Michael Peng", "Databricks, Software Engineering Intern"],
+    ["Kunal Patil", "Verkada, Software Engineering"],
+    ["Michael Peng", "Databricks, Software Engineering"],
     ["Peggy Liu", "Uber, Strategic Finance"],
     ["Tara Jeffries", "Okta, Product Marketing Manager"],
   ]),
@@ -248,7 +310,7 @@ export const offers: OfferRecord[] = [
     ["Isha Shah", "Data Science, Meta"],
     ["Alyssa Yin", "Product Marketing, SAP"],
     ["Sanjana Sinkar", "Product Marketing, TikTok"],
-    ["Ivy Kang", "UX Designer, Adobe"],
+    ["Ivy Kang", "UX Design, Adobe"],
     ["Wiona Tan", "Product Management, Amazon"],
     ["James Guo", "Software Engineering, Amazon"],
     ["James Guo", "Software Engineering, Uber"],
@@ -261,11 +323,11 @@ export const offers: OfferRecord[] = [
     ["Derreck Chu", "Bain & Company (Los Angeles)"],
     ["Nick Hom", "Bain & Company (Los Angeles)"],
     ["Michelle Kaviona", "Bain & Company (Los Angeles)"],
-    ["Lauren Young", "L.E.K Consulting (Los Angeles)"],
+    ["Lauren Young", "L.E.K. Consulting (Los Angeles)"],
     ["Lily Yau", "Accenture (San Francisco)"],
   ]),
   ...group("2021–2022", "Consulting", "Internship", [
-    ["Polina Pranovich", "Deloitte Consulting (Los Angeles)"],
+    ["Polina Pranovich", "Deloitte (Los Angeles)"],
     ["Kevin Cong", "Boston Consulting Group (Los Angeles)"],
     ["Andy Zhou", "Crowe (Los Angeles)"],
     ["Adam Linert", "Roland Berger (Qatar)"],

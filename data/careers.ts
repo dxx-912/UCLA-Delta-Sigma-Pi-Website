@@ -1,6 +1,7 @@
 // Careers Overview page (/placements-1) content — four industry sections, each with
-// verbatim intro copy and its company list (Section 7.4). Company logos are rendered
-// as labeled placeholders per Section 6.
+// verbatim intro copy and its company list (Section 7.4). Logo assets resolve through
+// data/companyLogos.ts, shared with the homepage spread, so each company renders the
+// same file on both surfaces; anything unsourced falls back to a labeled placeholder.
 
 export interface IndustrySection {
   industry: string;
@@ -36,7 +37,7 @@ export const industries: IndustrySection[] = [
       "Blackstone",
       "Credit Suisse",
       "Wells Fargo",
-      "RBC Capital Markets",
+      "Sixth Street",
       "Santander",
       "Macquarie",
       "BNY Mellon",
@@ -65,7 +66,7 @@ export const industries: IndustrySection[] = [
       "PwC",
       "KPMG",
       "Booz Allen Hamilton",
-      "ZS Associates",
+      "Strategy&",
       "Roland Berger",
     ],
   },
@@ -101,10 +102,11 @@ export const industries: IndustrySection[] = [
       "Redfin",
       "Applied Intuition",
       "MathWorks",
+      "Verizon",
     ],
   },
   {
-    industry: "Entertainment and Marketing",
+    industry: "Entertainment",
     intro:
       "Los Angeles is home to Hollywood and some of the world's most iconic brands. Beyond more traditional sectors of business, we also have a strong foothold in entertainment and marketing, with a large number of our members working in areas such as artist development, finance, and brand management.",
     companies: [
@@ -121,6 +123,7 @@ export const industries: IndustrySection[] = [
       "Sony Pictures",
       "Universal Music Group",
       "MGM Studios",
+      "Riot Games",
     ],
   },
 ];

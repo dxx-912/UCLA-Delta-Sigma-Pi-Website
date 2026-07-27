@@ -1,17 +1,21 @@
+import { logoFor, logoScaleFor } from "./companyLogos";
+
 // Homepage "We send our brothers to..." logo spread — the company lists from the
 // Careers Overview page (data/careers.ts), regrouped into the four categories the
 // spread displays (Investment Banking & Private Equity merged into one two-column
 // category) and extended with companies that recur in our offers history.
 //
-// Logos are placeholders until real files exist (see Section 6 / CLAUDE.md). Set
-// `src` on an entry to swap in a real asset — `components/CompanyLogo.tsx` then
-// renders it flat white via `brightness(0) invert(1)`. Until then the entry
-// renders as a labeled tile in the same slot.
+// Logo assets resolve through `data/companyLogos.ts`, which the Careers Overview
+// walls share — so a company renders the identical file on both surfaces. Drop a
+// file into public/images/logos/ and list it there to swap a placeholder for the
+// real mark; nothing in this file changes.
 
 export interface Company {
   name: string;
-  /** Path under /public, e.g. "/logos/goldman-sachs.svg". Omit while placeholdered. */
+  /** Resolved from data/companyLogos.ts. Undefined while placeholdered. */
   src?: string;
+  /** Optical-size correction from data/companyLogos.ts; "" for most marks. */
+  scale?: string;
 }
 
 export interface LogoCategory {
@@ -26,7 +30,8 @@ export interface LogoCategory {
   companies: Company[];
 }
 
-const names = (...list: string[]): Company[] => list.map((name) => ({ name }));
+const names = (...list: string[]): Company[] =>
+  list.map((name) => ({ name, src: logoFor(name), scale: logoScaleFor(name) }));
 
 export const logoSpreadHeadline = "We send our brothers to...";
 
@@ -45,7 +50,7 @@ export const logoCategories: LogoCategory[] = [
       "UBS",
       "Credit Suisse",
       "Wells Fargo",
-      "RBC Capital Markets",
+      "Sixth Street",
       "Santander",
       "Macquarie",
       "BNY Mellon",
@@ -114,12 +119,12 @@ export const logoCategories: LogoCategory[] = [
       "Mercer",
       "L.E.K. Consulting",
       "Booz Allen Hamilton",
-      "ZS Associates",
+      "Strategy&",
       "Roland Berger",
     ),
   },
   {
-    label: "Entertainment & Marketing",
+    label: "Entertainment",
     columns: 1,
     companies: names(
       "Disney",

@@ -16,7 +16,7 @@ const stats = [
   {
     number: 600,
     lead: <>+ Alumni.</>,
-    body: "From the world of finance to the music industry, from New York to Singapore, you can find DSP alumni everywhere.",
+    body: "From Wall Street to the music industry, from San Franciscoto Singapore, you can find UCLA DSP alumni everywhere.",
   },
   {
     number: 20,
@@ -95,7 +95,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1100px] px-6">
           <Reveal>
             <h2 className="text-center font-display text-3xl font-bold text-navy sm:text-4xl">
-              We&rsquo;re more than just a business club.
+              We&rsquo;re more than just a business fraternity.
             </h2>
           </Reveal>
 
@@ -133,10 +133,10 @@ export default function HomePage() {
                   Professionalism
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-neutral-600">
-                  Here at Delta Sigma Pi, we mean business. For more than twenty
-                  years, the fraternity has proved itself to be one of the most
+                  At Delta Sigma Pi, we mean business. For more than twenty
+                  years, this fraternity has proved itself to be one of the most
                   elite career-focused organizations on campus. From investment
-                  banking to entertainment, our members continue to achieve
+                  banking to technology, our members continue to achieve the highest standards of 
                   success in their respective fields and have worked at some of
                   the world&rsquo;s best companies.
                 </p>
@@ -157,7 +157,7 @@ export default function HomePage() {
       </section>
 
       {/* We send our brothers to... — logo spread, grouped by industry */}
-      <section className="bg-charcoal py-24 text-white">
+      <section className="bg-charcoal py-16 text-white">
         <div className="mx-auto max-w-[1200px] px-6">
           <Reveal>
             <h2 className="text-center font-display text-3xl font-bold sm:text-4xl">
@@ -165,18 +165,23 @@ export default function HomePage() {
             </h2>
           </Reveal>
 
-          <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-6">
+          <div className="mt-10 grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-6">
             {logoCategories.map((category, i) => (
               <Reveal
                 key={category.label}
                 delay={i * 0.05}
                 className={category.columns === 2 ? "lg:col-span-2" : "lg:col-span-1"}
               >
-                <h3 className="border-b border-white/15 pb-3 font-display text-xs font-bold uppercase tracking-[0.14em] text-white/70">
-                  {category.label}
-                </h3>
+                {/* Fixed-height header so a two-line label (e.g. "Investment Banking
+                    & Private Equity") doesn't push its column's grid lower than the
+                    rest — every column's rows need to line up horizontally. */}
+                <div className="flex min-h-[2.75rem] items-end justify-center border-b border-white/15 pb-2">
+                  <h3 className="text-center font-display text-sm italic text-white/75">
+                    {category.label}
+                  </h3>
+                </div>
                 <div
-                  className={`mt-6 grid grid-flow-col grid-rows-[repeat(13,minmax(0,1fr))] gap-x-4 gap-y-5 ${
+                  className={`mt-6 grid grid-flow-col grid-rows-[repeat(13,minmax(0,1fr))] items-center gap-x-6 gap-y-4 ${
                     category.columns === 2 ? "grid-cols-2" : "grid-cols-1"
                   }`}
                 >
@@ -188,7 +193,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <Reveal className="mt-16 text-center">
+          <Reveal className="mt-10 text-center">
             <Link
               href="/careers"
               className="inline-block bg-white px-8 py-3 text-sm font-medium text-charcoal transition-transform hover:-translate-y-0.5"

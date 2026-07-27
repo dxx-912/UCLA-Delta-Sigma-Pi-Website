@@ -14,10 +14,10 @@ export default function OffersPage() {
             Our Offers
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-neutral-600">
-            Check out the great offers that our brothers at Delta Sigma Pi have
+            Check out the incredible offers that our brothers at Delta Sigma Pi have
             received over the years. Professional excellence is the standard at
-            our fraternity and we take immense pride in placing our members
-            wherever they want to go.
+            our fraternity, and we take immense pride in helping our members achieve 
+            their career goals. 
           </p>
         </header>
 
