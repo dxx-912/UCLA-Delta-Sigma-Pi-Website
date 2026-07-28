@@ -1,5 +1,9 @@
 export const INSTAGRAM_URL = "https://instagram.com/ucladsp";
 
+/** Site author — used by the footer credit, the console notice, and metadata. */
+export const AUTHOR_NAME = "Daniel Xing";
+export const AUTHOR_URL = "https://www.linkedin.com/in/dxing01/";
+
 export const INTEREST_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLScyq4kgcgPDDUnmNojYCpakMZR8ByP4IifddGMM4KGvrQ2m3g/viewform";
 

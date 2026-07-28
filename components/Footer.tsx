@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { INSTAGRAM_URL } from "./siteConfig";
+import { AUTHOR_URL, INSTAGRAM_URL } from "./siteConfig";
 import { InstagramIcon } from "./icons";
 
 /**
@@ -41,7 +41,17 @@ export default function Footer() {
           .
         </p>
         <p className="text-xs text-white/50">
-          © {year} UCLA Delta Sigma Pi — Xi Omicron Chapter
+          © {year} UCLA Delta Sigma Pi — Xi Omicron Chapter - Site by{" "}
+          <a
+            href={AUTHOR_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            // Underline is deliberately fainter than the surrounding text so the
+            // credit reads as a quiet aside, not a call to action.
+            className="underline decoration-white/25 underline-offset-2 transition-colors hover:text-white/80 hover:decoration-white/60"
+          >
+            Daniel Xing
+          </a>
         </p>
       </div>
     </footer>
