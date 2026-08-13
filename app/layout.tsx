@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { AUTHOR_NAME, AUTHOR_URL } from "@/components/siteConfig";
+import { Analytics } from "@vercel/analytics/next";
 
 const display = Archivo({
   subsets: ["latin"],
@@ -64,6 +65,7 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
