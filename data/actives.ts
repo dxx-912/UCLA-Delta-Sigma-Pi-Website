@@ -11,6 +11,8 @@ export interface Active {
   name: string;
   gradYear: number;
   linkedin: string;
+  /** Same file used on the Leadership page for the 11 who are also officers. */
+  photo?: string;
 }
 
 export interface PledgeClass {
@@ -18,17 +20,23 @@ export interface PledgeClass {
   members: Active[];
 }
 
-const m = (name: string, gradYear: number, linkedin: string): Active => ({
-  name,
-  gradYear,
-  linkedin,
-});
+const m = (
+  name: string,
+  gradYear: number,
+  linkedin: string,
+  photo?: string,
+): Active => ({ name, gradYear, linkedin, photo });
 
 export const pledgeClasses: PledgeClass[] = [
   {
     name: "Beta Delta Class",
     members: [
-      m("Apurv Gupta", 2027, "https://www.linkedin.com/in/apurv--gupta/"),
+      m(
+        "Apurv Gupta",
+        2027,
+        "https://www.linkedin.com/in/apurv--gupta/",
+        "/Headshots/cropped/Apurv Gupta.jpg",
+      ),
       m("Brandi Burnell", 2026, "https://www.linkedin.com/in/brandi-burnell/"),
       m("Christina Ahn", 2027, "https://www.linkedin.com/in/christinaahn1/"),
       m("Hayden Selvakumar", 2027, "https://www.linkedin.com/in/hayden-selvakumar23/"),
@@ -75,26 +83,56 @@ export const pledgeClasses: PledgeClass[] = [
     name: "Beta Eta Class",
     members: [
       m("Alain Izawa", 2028, "https://www.linkedin.com/in/alain-izawa/"),
-      m("Brenda Nguyen", 2028, "https://www.linkedin.com/in/bbrendanguyen/"),
+      m(
+        "Brenda Nguyen",
+        2028,
+        "https://www.linkedin.com/in/bbrendanguyen/",
+        "/Headshots/cropped/Brenda Nguyen.jpg",
+      ),
       m("Evan Hsu", 2028, "https://www.linkedin.com/in/evan-hsu2006/"),
-      m("Hugo Hiramatsu", 2028, "https://www.linkedin.com/in/hugo-hiramatsu/"),
+      m(
+        "Hugo Hiramatsu",
+        2028,
+        "https://www.linkedin.com/in/hugo-hiramatsu/",
+        "/Headshots/cropped/Hugo Hiramatsu.jpg",
+      ),
       m("Jeffrey Chang", 2028, "https://www.linkedin.com/in/jeffrey-chang06/"),
       m("Jun Moon", 2028, "https://www.linkedin.com/in/junhmoon/"),
       m("Melissa Shi", 2028, "https://www.linkedin.com/in/melissaqshi/"),
       m("Nikhil Mummalaneni", 2027, "https://www.linkedin.com/in/nikhil-mummalaneni/"),
       m("Paul Thomsak", 2028, "https://www.linkedin.com/in/paul-thomsak-23386931a/"),
       m("Rebecca Chang", 2028, "https://www.linkedin.com/in/rebeccachang14/"),
-      m("Ryan Chao", 2028, "https://www.linkedin.com/in/ryan-chao06/"),
-      m("Ryan Chia", 2028, "https://www.linkedin.com/in/ryanchia1/"),
+      m(
+        "Ryan Chao",
+        2028,
+        "https://www.linkedin.com/in/ryan-chao06/",
+        "/Headshots/cropped/Ryan Chao.jpg",
+      ),
+      m(
+        "Ryan Chia",
+        2028,
+        "https://www.linkedin.com/in/ryanchia1/",
+        "/Headshots/cropped/Ryan Chia.jpg",
+      ),
       m("Taey Traisorat", 2028, "https://www.linkedin.com/in/primtraisorat/"),
-      m("Veronica Yang", 2028, "https://www.linkedin.com/in/veronicayang23/"),
+      m(
+        "Veronica Yang",
+        2028,
+        "https://www.linkedin.com/in/veronicayang23/",
+        "/Headshots/cropped/Veronica Yang.jpg",
+      ),
     ],
   },
   {
     name: "Beta Theta Class",
     members: [
       m("Carys Wilson", 2029, "https://www.linkedin.com/in/carys-wilson/"),
-      m("Vikram Dawar", 2029, "https://www.linkedin.com/in/vikramdawar/"),
+      m(
+        "Vikram Dawar",
+        2029,
+        "https://www.linkedin.com/in/vikramdawar/",
+        "/Headshots/cropped/Vikram Dawar.jpg",
+      ),
       m("Mili Shah", 2029, "https://www.linkedin.com/in/mili-s/"),
       m("Jasmin Kwon", 2029, "https://www.linkedin.com/in/jasminkwon/"),
       m("Nikhil Vijay", 2029, "https://www.linkedin.com/in/nikhilvijay-/"),
@@ -107,14 +145,34 @@ export const pledgeClasses: PledgeClass[] = [
     name: "Beta Kappa Class",
     members: [
       m("Jin Kim", 2029, "https://www.linkedin.com/in/jin-kim-5259b7386/"),
-      m("Kijoo Song", 2029, "https://www.linkedin.com/in/kijoosong/"),
-      m("Kiera Wang", 2028, "https://www.linkedin.com/in/kierawang/"),
+      m(
+        "Kijoo Song",
+        2029,
+        "https://www.linkedin.com/in/kijoosong/",
+        "/Headshots/cropped/Kijoo Song.jpg",
+      ),
+      m(
+        "Kiera Wang",
+        2028,
+        "https://www.linkedin.com/in/kierawang/",
+        "/Headshots/cropped/Kiera Wang.jpg",
+      ),
       m("Kevin Yang", 2029, "https://www.linkedin.com/in/kevinyuwenyang/"),
-      m("Daniel Xing", 2029, "https://www.linkedin.com/in/dxing01/"),
+      m(
+        "Daniel Xing",
+        2029,
+        "https://www.linkedin.com/in/dxing01/",
+        "/Headshots/cropped/Daniel Xing.jpg",
+      ),
       m("Iris Zeng", 2029, "https://www.linkedin.com/in/iristyzeng/"),
       m("Kelly Hu", 2028, "https://www.linkedin.com/in/kelly-grace-hu/"),
       m("Aaron Teng", 2029, "https://www.linkedin.com/in/aaron-teng04/"),
-      m("Yujin Baik", 2029, "https://www.linkedin.com/in/yujin-baik/"),
+      m(
+        "Yujin Baik",
+        2029,
+        "https://www.linkedin.com/in/yujin-baik/",
+        "/Headshots/cropped/Yujin Baik.jpg",
+      ),
       m("Kenneth Lee", 2029, "https://www.linkedin.com/in/kennethponienlee/"),
       m("Sahil Reddy", 2029, "https://www.linkedin.com/in/sahil-reddy-012b9235b/"),
       m("Eleanor Lee", 2029, "https://www.linkedin.com/in/eleanor-lee06/"),

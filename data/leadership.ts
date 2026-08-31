@@ -54,7 +54,8 @@ export const leadership: Officer[] = [
   {
     name: "Apurv Gupta",
     title: "VP Pledge Education",
-    bio: "Bio coming soon.",
+    bio: "Apurv is a 4th-year student from Cupertino, CA studying Statistics and Data Science. Next summer, he will join Perella Weinberg Partners in New York as an Investment Banking Analyst focused on M&A. Apurv is also in Bruin Asset Management and the Global Research and Consulting Group (GRC), and his hobbies include playing pickleball, watching movies, and eating new food.",
+    photo: "/Headshots/cropped/Apurv Gupta.jpg",
     linkedin: "https://www.linkedin.com/in/apurv--gupta/",
   },
   {
@@ -117,7 +118,8 @@ export const leadership: Officer[] = [
   {
     name: "Kiera Wang",
     title: "VP Community Service",
-    bio: "Bio coming soon.",
+    bio: "3rd-year student from Taipei, Shanghai & Beijing double majoring in Cognitive Science and Economics. She spent this past summer as an AI & Data Engineering Consulting intern in the Technology & Transformations Team at Deloitte APAC. At UCLA, she works in the Career Strategy Team at the Anderson School of Management and the Cultural Affairs Commission under USAC. Apart from professional aspirations, she enjoys painting, graphic design, fashion and rating matchas in LA.",
+    photo: "/Headshots/cropped/Kiera Wang.jpg",
     linkedin: "https://www.linkedin.com/in/kierawang/",
   },
   {

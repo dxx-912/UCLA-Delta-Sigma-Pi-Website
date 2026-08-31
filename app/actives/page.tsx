@@ -33,10 +33,21 @@ export default function ActivesPage() {
                 {pc.members.map((member) => (
                   <Reveal key={member.name} className="group text-center">
                     <PersonPhoto name={member.name} linkedin={member.linkedin}>
-                      <Placeholder
-                        label={`Headshot — ${member.name}`}
-                        className="aspect-[4/5] w-full"
-                      />
+                      {member.photo ? (
+                        // Same crop as the Leadership page — see data/actives.ts.
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={member.photo}
+                          alt={`Headshot — ${member.name}`}
+                          className="aspect-[4/5] w-full object-cover object-center"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <Placeholder
+                          label={`Headshot — ${member.name}`}
+                          className="aspect-[4/5] w-full"
+                        />
+                      )}
                     </PersonPhoto>
                     <p className="mt-3 text-[13px] font-bold text-ink">
                       {member.name}
