@@ -16,7 +16,7 @@ const stats = [
   {
     number: 600,
     lead: <>+ Alumni.</>,
-    body: "From Wall Street to the music industry, from San Franciscoto Singapore, you can find UCLA DSP alumni everywhere.",
+    body: "From Wall Street to the entertainment industry, from San Franciscoto Singapore, you can find UCLA DSP alumni everywhere.",
   },
   {
     number: 20,
@@ -95,7 +95,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1100px] px-6">
           <Reveal>
             <h2 className="text-center font-display text-3xl font-bold text-navy sm:text-4xl">
-              We&rsquo;re more than just a business fraternity.
+              Our Values
             </h2>
           </Reveal>
 
@@ -135,8 +135,8 @@ export default function HomePage() {
                 <p className="mt-4 text-sm leading-relaxed text-neutral-600">
                   At Delta Sigma Pi, we mean business. For more than twenty
                   years, this fraternity has proved itself to be one of the most
-                  elite career-focused organizations on campus. From investment
-                  banking to technology, our members continue to achieve the highest standards of 
+                  elite career-focused, professionally successful organizations on campus. From 
+                  investment banking to technology, our members continue to achieve the highest standards of 
                   success in their respective fields and have worked at some of
                   the world&rsquo;s best companies.
                 </p>
@@ -209,7 +209,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1000px] px-6">
           <Reveal>
             <h2 className="text-center font-display text-3xl font-bold">
-              Follow our journey.
+              Follow our journey on Instagram
             </h2>
           </Reveal>
           <Reveal className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">

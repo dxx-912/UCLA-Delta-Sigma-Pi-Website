@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Placeholder from "@/components/Placeholder";
-import Reveal from "@/components/Reveal";
-import { INTEREST_FORM_URL } from "@/components/siteConfig";
+import RecruitmentTimeline from "@/components/RecruitmentTimeline";
+import { APPLICATION_URL, INTEREST_FORM_URL } from "@/components/siteConfig";
 
 export const metadata: Metadata = {
   title: "Recruitment Information — UCLA Delta Sigma Pi",
@@ -21,27 +20,41 @@ export default function JoinUsPage() {
             premier co-ed business fraternity. Make sure to follow our Instagram
             and fill out the interest form below for any additional updates.
           </p>
-          <a
-            href={INTEREST_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-block bg-navy px-8 py-3 text-sm font-medium text-white transition-transform hover:-translate-y-0.5"
-          >
-            Interest Form
-          </a>
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <a
+              href={APPLICATION_URL}
+              className="inline-block w-48 bg-navy px-8 py-3 text-sm font-medium text-white transition-transform hover:-translate-y-0.5"
+            >
+              Application
+            </a>
+            <a
+              href={INTEREST_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-48 bg-navy px-8 py-3 text-sm font-medium text-white transition-transform hover:-translate-y-0.5"
+            >
+              Interest Form
+            </a>
+          </div>
         </header>
-
-        <Reveal className="mt-16 grid gap-6 sm:grid-cols-2">
-          <Placeholder
-            label="Rush flyer — After Hours (Winter 2026 Recruitment)"
-            className="aspect-square w-full"
-          />
-          <Placeholder
-            label="Rush flyer — Careers and more"
-            className="aspect-square w-full"
-          />
-        </Reveal>
       </div>
+
+      {/* Recruitment timeline — separated into its own dark band, matching the
+          homepage's charcoal sections */}
+      <section className="bg-charcoal py-20 text-white">
+        <div className="mx-auto max-w-[1100px] px-6">
+          <h2 className="text-center font-display text-2xl font-bold sm:text-3xl">
+            Recruitment Timeline
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-sm text-white/70">
+            Our Fall 2026 schedule is still being finalized — check back soon
+            for exact dates, times, and locations.
+          </p>
+          <div className="mt-14">
+            <RecruitmentTimeline />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Placeholder from "@/components/Placeholder";
+import PersonPhoto from "@/components/PersonPhoto";
 import Reveal from "@/components/Reveal";
 import { leadership, currentTerm } from "@/data/leadership";
 
@@ -29,10 +30,31 @@ export default function LeadershipPage() {
               delay={(i % 2) * 0.08}
               className="group grid grid-cols-[120px_1fr] gap-5 rounded-md p-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:grid-cols-[150px_1fr]"
             >
-              <Placeholder
-                label={`Headshot — ${officer.name}`}
-                className="aspect-[4/5] w-full"
-              />
+              <PersonPhoto
+                name={officer.name}
+                linkedin={officer.linkedin}
+                rounded
+                liftOnHover={false}
+              >
+                {officer.photo ? (
+                  // Pre-cropped to 4:5 and centered on each officer's face (see
+                  // data/leadership.ts), so object-cover here is a safety net,
+                  // not the primary framing mechanism.
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={officer.photo}
+                    alt={`Headshot — ${officer.name}`}
+                    className="aspect-[4/5] w-full rounded-md object-cover object-center"
+                    loading="lazy"
+                  />
+                ) : (
+                  <Placeholder
+                    label={`Headshot — ${officer.name}`}
+                    className="aspect-[4/5] w-full"
+                    rounded
+                  />
+                )}
+              </PersonPhoto>
               <div>
                 <h2 className="text-[15px] leading-snug">
                   <span className="font-bold text-ink">{officer.name}</span>

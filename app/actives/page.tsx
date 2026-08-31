@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Placeholder from "@/components/Placeholder";
+import PersonPhoto from "@/components/PersonPhoto";
 import Reveal from "@/components/Reveal";
 import { pledgeClasses } from "@/data/actives";
 
@@ -31,10 +32,12 @@ export default function ActivesPage() {
               <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-6">
                 {pc.members.map((member) => (
                   <Reveal key={member.name} className="group text-center">
-                    <Placeholder
-                      label={`Headshot — ${member.name}`}
-                      className="aspect-[4/5] w-full transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-lg"
-                    />
+                    <PersonPhoto name={member.name} linkedin={member.linkedin}>
+                      <Placeholder
+                        label={`Headshot — ${member.name}`}
+                        className="aspect-[4/5] w-full"
+                      />
+                    </PersonPhoto>
                     <p className="mt-3 text-[13px] font-bold text-ink">
                       {member.name}
                     </p>
