@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Archivo, Karla } from "next/font/google";
 import "./globals.css";
+// The /next entry point, not /react — it hooks into App Router navigation so
+// client-side route changes are counted as pageviews.
+import { Analytics } from "@vercel/analytics/next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
@@ -42,6 +45,8 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
+        {/* In the root layout, so every route is tracked without per-page setup. */}
+        <Analytics />
       </body>
     </html>
   );
