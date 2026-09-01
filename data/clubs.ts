@@ -14,32 +14,79 @@ export interface Club {
   name: string;
   /** Path under `public/`. Filenames are the chapter's originals, verbatim. */
   src: string;
+  /** The club's own site — each logo links out to it. */
+  url: string;
 }
 
 export const clubsHeadline = "Our Campus Involvements";
 
 const CLUB_DIR = "/images/club logos";
 
-const club = (name: string, file: string): Club => ({
+const club = (name: string, file: string, url: string): Club => ({
   name,
   src: `${CLUB_DIR}/${file}`,
+  url,
 });
 
 export const clubs: Club[] = [
   // Bruin Asset Management shipped two files — this black-on-transparent mark
   // and a white-on-blue tile. The transparent one suits the white section.
-  club("Bruin Asset Management", "BAM Logo.png"),
-  club("Bruin Hedge Fund", "Bruin Hedge Fund Loog.webp"),
-  club("Bruin Value Investing", "Bruin Value Investing Logo.webp"),
-  club("Bruins in Finance and Banking", "BFB Logo.webp"),
-  club("Impact Investing Group", "IIG Logo.webp"),
-  club("UConsulting", "UConsulting Logo.webp"),
-  club("Bruin Consulting", "Bruin Consulting Logo.webp"),
-  club("Bruin Ventures", "BV Logo.webp"),
-  club("180 Degrees Consulting", "180DC Consulting Logo.webp"),
-  club("Bruin Strategy Network", "BSN Logo.webp"),
-  club("International Business for Bruins", "IBB Logo.png"),
-  club("Global Research Consulting", "GRC Logo.webp"),
-  club("Business in Entertainment Association", "BEA logo.webp"),
-  club("Bruin Private Equity", "bruin private equity logo.png"),
+  club(
+    "Bruin Asset Management",
+    "BAM Logo.png",
+    "https://www.bruinassetmanagement.com/",
+  ),
+  club(
+    "Bruin Hedge Fund",
+    "Bruin Hedge Fund Loog.webp",
+    "https://www.bruinhedgefund.com/",
+  ),
+  club(
+    "Bruin Value Investing",
+    "Bruin Value Investing Logo.webp",
+    "https://www.bruinvalueinvesting.org/",
+  ),
+  club(
+    "Bruins in Finance and Banking",
+    "BFB Logo.webp",
+    "https://www.bfbatucla.com/",
+  ),
+  club("Impact Investing Group", "IIG Logo.webp", "https://www.uclaiig.com/"),
+  club(
+    "UConsulting",
+    "UConsulting Logo.webp",
+    "https://www.uconsultingla.com/",
+  ),
+  club(
+    "Bruin Consulting",
+    "Bruin Consulting Logo.webp",
+    "https://www.bruin.consulting/",
+  ),
+  club("Bruin Ventures", "BV Logo.webp", "https://www.uclabv.com/"),
+  club(
+    "180 Degrees Consulting",
+    "180DC Consulting Logo.webp",
+    "https://www.ucla180dc.org/",
+  ),
+  club("Bruin Strategy Network", "BSN Logo.webp", "https://bruinstrategy.org/"),
+  club(
+    "International Business for Bruins",
+    "IBB Logo.png",
+    "https://www.ibbatucla.com/",
+  ),
+  club(
+    "Global Research Consulting",
+    "GRC Logo.webp",
+    "https://www.grcucla.com/",
+  ),
+  club(
+    "Business in Entertainment Association",
+    "BEA logo.webp",
+    "https://www.uclabea.com/",
+  ),
+  club(
+    "Bruin Private Equity",
+    "bruin private equity logo.png",
+    "https://www.bruinprivateequity.com/",
+  ),
 ];

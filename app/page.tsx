@@ -240,9 +240,14 @@ export default function HomePage() {
               class. */}
           <Reveal className="mt-14 flex flex-wrap justify-center gap-x-10 gap-y-14">
             {clubs.map((c) => (
-              <div
+              // The mark's alt text is the club name, so the link takes its
+              // accessible name from that without needing a label of its own.
+              <a
                 key={c.name}
-                className="flex w-32 items-center justify-center sm:w-36 lg:w-40"
+                href={c.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative flex w-32 items-center justify-center transition-transform duration-200 ease-out hover:z-10 motion-safe:hover:scale-110 sm:w-36 lg:w-40"
               >
                 <CompanyLogo
                   name={c.name}
@@ -251,7 +256,7 @@ export default function HomePage() {
                   tone="light"
                   className="h-24 sm:h-28 lg:h-36"
                 />
-              </div>
+              </a>
             ))}
           </Reveal>
         </div>

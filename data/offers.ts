@@ -73,6 +73,7 @@ export const offers: OfferRecord[] = [
     ["Yuvraj Chadha", "IBM, Business Technology"],
     ["Sara Tatke", "Adobe, Consulting"],
     ["Neha Kondeti", "Robinhood"],
+    ["Veronica Yang", "Corsair"],
   ]),
   ...group("2025–2026", "Consulting", "Full-Time", [
     ["Iain Han", "L.E.K. Consulting (Los Angeles)"],
@@ -90,7 +91,6 @@ export const offers: OfferRecord[] = [
   ...group("2025–2026", "Music and Entertainment", "Internship", [
     ["Kayla Kim", "Paramount"],
     ["Dlency Zheng", "Paramount"],
-    ["Veronica Yang", "Corsair"],
     ["Shelley Weng", "Wasserman"],
   ]),
   ...group("2025–2026", "Other", "Full-Time", [
