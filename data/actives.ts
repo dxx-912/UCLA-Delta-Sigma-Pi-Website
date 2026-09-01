@@ -410,7 +410,7 @@ export const pledgeClasses: PledgeClass[] = [
       ),
       m(
         "Kelly Hu",
-        2028,
+        2029,
         "https://www.linkedin.com/in/kelly-grace-hu/",
         "/Headshots/cropped/Kelly Hu.jpg",
       ),

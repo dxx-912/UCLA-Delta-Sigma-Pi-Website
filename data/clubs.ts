@@ -89,4 +89,22 @@ export const clubs: Club[] = [
     "bruin private equity logo.png",
     "https://www.bruinprivateequity.com/",
   ),
+
+  club(
+    "Undergraduate Business Society",
+    "UBS logo.png",
+    "https://uclaubs.com/",
+  ),
+  club(
+    "Bruin Real Estate Association",
+    "brea logo.webp",
+    "https://uclabrea.org/",
+  ),
+  club(
+    "Bruin Quant Traders",
+    "bruin quant traders logo.jpeg",
+    "https://bruinquant.com/",
+  ),
+  club("Data Science Union", "dsu logo.png", "https://datascienceunion.com/"),
+  club("ACM at UCLA", "acm ucla.png", "https://www.uclaacm.com/"),
 ];
