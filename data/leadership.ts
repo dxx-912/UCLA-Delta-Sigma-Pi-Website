@@ -68,6 +68,13 @@ export const leadership: Officer[] = [
     linkedin: "https://www.linkedin.com/in/dxing01/",
   },
   {
+    name: "Kelly Hu",
+    title: "Director of Marketing",
+    bio: "Bio coming soon.",
+    photo: "/Headshots/cropped/Kelly Hu.jpg",
+    linkedin: "https://www.linkedin.com/in/kelly-grace-hu/",
+  },
+  {
     name: "Brenda Nguyen",
     title: "VP Chapter Operations",
     bio: "3rd-year student from Huntington Beach, CA studying Economics with a Real Estate Minor. Brenda is pursuing a career in real estate finance and interned at CIM Group this summer as a Real Estate Investments Intern. In her free time, Brenda loves golfing and exploring new food/coffee shops.",

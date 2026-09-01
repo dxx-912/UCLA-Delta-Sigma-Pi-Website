@@ -5,7 +5,7 @@ export const AUTHOR_NAME = "Daniel Xing";
 export const AUTHOR_URL = "https://www.linkedin.com/in/dxing01/";
 
 export const INTEREST_FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLScyq4kgcgPDDUnmNojYCpakMZR8ByP4IifddGMM4KGvrQ2m3g/viewform";
+  "https://docs.google.com/forms/d/e/1FAIpQLScUq0S-LbZnMmOwWLjtTU1e8COOveUouuO2EQKJyE8In5705Q/viewform";
 
 
 export type NavChild = { label: string; href: string };

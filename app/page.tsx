@@ -11,7 +11,7 @@ import { instagramPosts } from "@/data/instagram";
 
 const stats = [
   {
-    number: 65,
+    number: 60,
     lead: <>+ Active Brothers.</>,
     body: "At Delta Sigma Pi, you'll meet some of the most talented, ambitious and driven people at UCLA from all walks of life.",
   },
