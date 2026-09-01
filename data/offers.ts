@@ -104,6 +104,7 @@ export const offers: OfferRecord[] = [
     ["Paul Thomsak", "Insurance, MetLife"],
     ["Brenda Nguyen", "Real Estate, CIM Securities"],
     ["Evan Hsu", "Tax Accounting, BDO"],
+    ["Isaiah Bordador", "Analytics, eBay"],
     ["Kenneth Lee", "Aerospace Defence, Lockheed Martin"],
   ]),
 

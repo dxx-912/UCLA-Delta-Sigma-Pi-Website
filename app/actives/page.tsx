@@ -14,9 +14,15 @@ export default function ActivesPage() {
     <div className="bg-white">
       {/* Hero group photo */}
       <div className="mx-auto max-w-[1100px] px-6 pt-12">
-        <Placeholder
-          label="Photo — Active Brothers (beach group photo)"
-          className="aspect-[16/7] w-full"
+        {/* A 4:3 photo in a 16:7 banner, so object-cover drops 42% of the
+            height. Centring would cut the group off at the waist under a lot of
+            empty night sky, so the crop is pulled down to 80%. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/actives photo.JPG"
+          alt="UCLA Delta Sigma Pi active brothers together by the pier at night"
+          className="aspect-[16/7] w-full object-cover object-[center_80%]"
+          loading="lazy"
         />
       </div>
 

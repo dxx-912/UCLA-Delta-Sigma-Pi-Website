@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import RecruitmentTimeline from "@/components/RecruitmentTimeline";
-import { APPLICATION_URL, INTEREST_FORM_URL } from "@/components/siteConfig";
+import { INTEREST_FORM_URL } from "@/components/siteConfig";
 
 export const metadata: Metadata = {
   title: "Recruitment Information — UCLA Delta Sigma Pi",
@@ -15,27 +15,18 @@ export default function JoinUsPage() {
             Join Us
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-neutral-600">
-            We are looking forward to hosting you for our upcoming Winter 2026
-            Recruitment cycle. Thank you for your interest in joining UCLA&rsquo;s
-            premier co-ed business fraternity. Make sure to follow our Instagram
-            and fill out the interest form below for any additional updates.
+            We are looking forward to hosting you for our upcoming Fall 2026
+            recruitment cycle. Thank you for your interest in joining UCLA&rsquo;s
+            premiere co-ed business fraternity.
           </p>
-          <div className="mt-8 flex flex-col items-center gap-3">
-            <a
-              href={APPLICATION_URL}
-              className="inline-block w-48 bg-navy px-8 py-3 text-sm font-medium text-white transition-transform hover:-translate-y-0.5"
-            >
-              Application
-            </a>
-            <a
-              href={INTEREST_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block w-48 bg-navy px-8 py-3 text-sm font-medium text-white transition-transform hover:-translate-y-0.5"
-            >
-              Interest Form
-            </a>
-          </div>
+          <a
+            href={INTEREST_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-block w-48 bg-navy px-8 py-3 text-sm font-medium text-white transition-transform hover:-translate-y-0.5"
+          >
+            Interest Form
+          </a>
         </header>
       </div>
 

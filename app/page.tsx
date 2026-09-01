@@ -1,11 +1,13 @@
 import Link from "next/link";
-import Placeholder from "@/components/Placeholder";
 import Reveal from "@/components/Reveal";
 import CountUp from "@/components/CountUp";
 import Carousel from "@/components/Carousel";
 import HeroVideo from "@/components/HeroVideo";
 import CompanyLogo from "@/components/CompanyLogo";
 import { logoCategories, logoSpreadHeadline } from "@/data/logos";
+import { clubs, clubsHeadline } from "@/data/clubs";
+import { galleryPhotos } from "@/data/gallery";
+import { instagramPosts } from "@/data/instagram";
 
 const stats = [
   {
@@ -86,7 +88,7 @@ export default function HomePage() {
       {/* Photo gallery */}
       <section className="bg-charcoal pb-24">
         <div className="mx-auto max-w-[1200px] px-6">
-          <Carousel count={14} />
+          <Carousel photos={galleryPhotos} />
         </div>
       </section>
 
@@ -102,9 +104,12 @@ export default function HomePage() {
           <div className="mt-16 space-y-20">
             {/* Brotherhood — image left, text right */}
             <Reveal className="grid items-center gap-10 md:grid-cols-2">
-              <Placeholder
-                label="Photo — Brotherhood (beach group photo)"
-                className="aspect-[4/3] w-full"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/brotherhood photo.webp"
+                alt="UCLA Delta Sigma Pi brothers together at night"
+                className="aspect-[4/3] w-full rounded-sm object-cover object-center"
+                loading="lazy"
               />
               <div>
                 <h3 className="font-display text-2xl font-bold text-navy">
@@ -147,9 +152,14 @@ export default function HomePage() {
                   See where we&rsquo;ve gone
                 </Link>
               </div>
-              <Placeholder
-                label="Photo — Professionalism (formal group on steps)"
-                className="aspect-[4/3] w-full md:order-2"
+              {/* Wider than the 4:3 slot, so object-cover trims the sides —
+                  the group is centred, so nobody is cut off. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/professionalism phoot.webp"
+                alt="UCLA Delta Sigma Pi brothers in business attire on the steps"
+                className="aspect-[4/3] w-full rounded-sm object-cover object-center md:order-2"
+                loading="lazy"
               />
             </Reveal>
           </div>
@@ -180,13 +190,17 @@ export default function HomePage() {
                     {category.label}
                   </h3>
                 </div>
+                {/* gap-y is an exact value rather than a step on the scale: each
+                    row is a 2.5rem (h-10) logo, so a 1.375rem gap puts the row
+                    pitch — and the column's overall height — ~10% above the
+                    1rem gap it replaced. gap-y-5 undershoots, gap-y-6 overshoots. */}
                 <div
-                  className={`mt-6 grid grid-flow-col grid-rows-[repeat(13,minmax(0,1fr))] items-center gap-x-6 gap-y-4 ${
+                  className={`mt-6 grid grid-flow-col grid-rows-[repeat(13,minmax(0,1fr))] items-center gap-x-6 gap-y-[1.375rem] ${
                     category.columns === 2 ? "grid-cols-2" : "grid-cols-1"
                   }`}
                 >
                   {category.companies.map((company) => (
-                    <CompanyLogo key={company.name} {...company} />
+                    <CompanyLogo key={company.name} {...company} interactive />
                   ))}
                 </div>
               </Reveal>
@@ -204,6 +218,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Our campus involvements — club logos */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-[1100px] px-6">
+          <Reveal>
+            <h2 className="text-center font-display text-3xl font-bold text-navy sm:text-4xl">
+              {clubsHeadline}
+            </h2>
+          </Reveal>
+
+          {/* Marks are shown as-is rather than recoloured — `showsColor` keeps
+              the real artwork, which several of them need because their tile
+              colour is part of the logo.
+
+              Fixed-width cells that wrap, rather than a fixed column count: at
+              13 logos every full grid leaves an awkward remainder (7 columns
+              strands one cell, 6 or 4 strand a single logo alone on the last
+              row), and `justify-center` centres whatever is left over so the
+              short row reads as deliberate. The widths also set the size — most
+              club marks are square, so cell *width* caps them, not the height
+              class. */}
+          <Reveal className="mt-14 flex flex-wrap justify-center gap-x-10 gap-y-14">
+            {clubs.map((c) => (
+              <div
+                key={c.name}
+                className="flex w-32 items-center justify-center sm:w-36 lg:w-40"
+              >
+                <CompanyLogo
+                  name={c.name}
+                  src={c.src}
+                  showsColor
+                  tone="light"
+                  className="h-24 sm:h-28 lg:h-36"
+                />
+              </div>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
       {/* Follow our journey — Instagram feed */}
       <section className="bg-charcoal py-20 text-white">
         <div className="mx-auto max-w-[1000px] px-6">
@@ -212,12 +265,17 @@ export default function HomePage() {
               Follow our journey on Instagram
             </h2>
           </Reveal>
+          {/* Order is the chapter's file numbering, left to right / top to
+              bottom — see data/instagram.ts. */}
           <Reveal className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <Placeholder
-                key={i}
-                label={`Instagram post ${i + 1}`}
-                className="aspect-square"
+            {instagramPosts.map((post) => (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img
+                key={post.src}
+                src={post.src}
+                alt={post.alt}
+                className="aspect-square w-full object-cover object-center"
+                loading="lazy"
               />
             ))}
           </Reveal>

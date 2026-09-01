@@ -2,15 +2,19 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import Placeholder from "./Placeholder";
+import type { GalleryPhoto } from "@/data/gallery";
 import { ArrowLeft, ArrowRight } from "./icons";
 
 /**
  * Auto-advancing, swipeable photo carousel for the homepage gallery
- * (Section 5.1 — converts the current static row of 14 photos into a real
+ * (Section 5.1 — converts the current static row of photos into a real
  * carousel; same photos, same crop treatment, just presented with motion).
+ *
+ * Photo order comes from data/gallery.ts and is fixed there on purpose — see
+ * the note in that file about hydration.
  */
-export default function Carousel({ count = 14 }: { count?: number }) {
+export default function Carousel({ photos }: { photos: GalleryPhoto[] }) {
+  const count = photos.length;
   const [visible, setVisible] = useState(3);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -69,15 +73,31 @@ export default function Carousel({ count = 14 }: { count?: number }) {
             else if (info.offset.x > 60) prev();
           }}
         >
-          {Array.from({ length: count }).map((_, i) => (
+          {photos.map((photo) => (
             <div
-              key={i}
+              key={photo.src}
               className="shrink-0 basis-full px-1.5 sm:basis-1/2 lg:basis-1/3"
             >
-              <Placeholder
-                label={`Gallery photo ${i + 1} of ${count}`}
-                className="aspect-[3/4]"
-              />
+              {/* Landscape sources in a square slot, so object-cover trims the
+                  sides rather than letterboxing. The wrapper clips, which is
+                  what lets `zoom` scale past cover without the image spilling
+                  over the neighbouring slides. */}
+              <div className="aspect-square overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="h-full w-full object-cover"
+                  // Inline rather than Tailwind classes: these are per-photo
+                  // values from data, which JIT can't generate class names for.
+                  style={{
+                    objectPosition: photo.position ?? "center",
+                    transform: photo.zoom ? `scale(${photo.zoom})` : undefined,
+                  }}
+                  draggable={false}
+                  loading="lazy"
+                />
+              </div>
             </div>
           ))}
         </motion.div>

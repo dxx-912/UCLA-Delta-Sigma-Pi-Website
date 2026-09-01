@@ -6,10 +6,14 @@
 // versions of the same mark.
 //
 // Adding a logo is a two-step drop-in:
-//   1. Save the file to `public/images/logos/` named by `logoSlug(name)`
+//   1. Save the file to the `LOGO_DIR` folder below, named by `logoSlug(name)`
 //      (e.g. "Perella Weinberg Partners" -> perella-weinberg-partners.png).
 //   2. Add that filename to `LOGO_FILES` below.
 // Anything not listed renders as a labeled placeholder tile in the same slot.
+//
+// Renaming that folder breaks every logo on the site at once — the files are
+// still there, but each `src` 404s and the whole wall falls back to alt text.
+// If it moves, change `LOGO_DIR` to match and nothing else needs touching.
 //
 // Asset requirements — these matter because both surfaces recolour the mark with
 // a CSS `brightness(0)` filter (to white on the dark homepage, to black on the
@@ -36,7 +40,7 @@ export function logoSlug(name: string): string {
 }
 
 /**
- * Logo files that actually exist in `public/images/logos/`.
+ * Logo files that actually exist in the `LOGO_DIR` folder.
  *
  * Deliberately an explicit list rather than a filesystem scan: this module is
  * imported by server components at build time, and an explicit list keeps the
@@ -52,7 +56,7 @@ export function logoSlug(name: string): string {
  */
 const LOGO_FILES: string[] = [
   "accenture.svg",
-  "adobe.svg",
+  "adobe.png",
   "amazon.svg",
   "apple.png",
   "applied-intuition.svg",
@@ -67,7 +71,7 @@ const LOGO_FILES: string[] = [
   "booz-allen-hamilton.svg",
   "capital-one.svg",
   "cisco.svg",
-  "citi.svg",
+  "citi.png",
   "credit-suisse.svg",
   "crowdstrike.svg",
   "databricks.svg",
@@ -110,7 +114,7 @@ const LOGO_FILES: string[] = [
   "robinhood.svg",
   "roland-berger.svg",
   "rothschild-co.svg",
-  "salesforce.png",
+  "salesforce.svg",
   "santander.svg",
   "sap.svg",
   "sixth-street.svg",
@@ -137,10 +141,17 @@ const BY_SLUG = new Map(
   LOGO_FILES.map((file) => [file.replace(/\.[^.]+$/, ""), file]),
 );
 
+/**
+ * Folder under `public/` holding every logo file. The space is fine in a URL —
+ * the browser encodes it, and the Headshots assets already rely on the same
+ * thing — but it does mean this string must track the folder name exactly.
+ */
+const LOGO_DIR = "/images/company logos";
+
 /** Public path for a company's logo, or `undefined` while it's placeholdered. */
 export function logoFor(name: string): string | undefined {
   const file = BY_SLUG.get(logoSlug(name));
-  return file ? `/images/logos/${file}` : undefined;
+  return file ? `${LOGO_DIR}/${file}` : undefined;
 }
 
 /**
@@ -154,11 +165,97 @@ export function logoFor(name: string): string | undefined {
  * stay aligned across every column.
  */
 const LOGO_SCALE: Record<string, string> = {
-  citi: "scale-125",
   meta: "scale-125",
 };
 
 /** Extra sizing class for a company's mark, or "" when it needs no correction. */
 export function logoScaleFor(name: string): string {
   return LOGO_SCALE[logoSlug(name)] ?? "";
+}
+
+/**
+ * Assets whose own artwork stays legible on the white chip the homepage spread
+ * fades in behind a hovered logo — those drop the recolour filter entirely and
+ * show the real mark. Everything else is flattened to black on the chip, which
+ * is the same treatment the Careers walls already use on white.
+ *
+ * The test is contrast against *white*, which is the mirror of the one that
+ * governs the resting state: a mark fails here by being too light, not too
+ * dark. That flips which assets qualify. Most of this list is the navy-and-
+ * black financial marks that are invisible on the charcoal background and read
+ * perfectly on the chip.
+ *
+ * Three things to check before adding to this list, each of which has already
+ * cost real debugging:
+ *   * An SVG shape with no `fill` renders black, so a file can look
+ *     multi-colour in its source and still have a black wordmark. Check the
+ *     rendered mark, not just the declared colours.
+ *   * The *white* variant a brand publishes for dark backgrounds puts a
+ *     coloured glyph beside a white wordmark that disappears on the chip. The
+ *     standard full-colour variant is the one to use; Amazon, Intel,
+ *     Databricks, EY and MGM all started as the white variant and only
+ *     qualified once their colour files replaced it.
+ *   * A mark on an opaque coloured tile can't be used at all. The resting
+ *     state inverts everything opaque to white, so the tile becomes a solid
+ *     white block on the charcoal wall. Snapchat (white ghost on a full-bleed
+ *     yellow square) fails this way and stays on its transparent silhouette.
+ */
+const COLOUR_ON_LIGHT = new Set([
+  "accenture",
+  "adobe",
+  "amazon",
+  "atlassian",
+  "bain-company",
+  "bank-of-america",
+  "barclays",
+  "bcg",
+  "bny-mellon",
+  "capital-one",
+  "cisco",
+  "citi",
+  "credit-suisse",
+  "crowdstrike",
+  "databricks",
+  "deloitte",
+  "disney",
+  "evercore",
+  "ey-parthenon",
+  "google",
+  "houlihan-lokey",
+  "hulu",
+  "intel",
+  "kkr-co",
+  "kpmg",
+  "lazard",
+  "lek-consulting",
+  "mercer",
+  "meta",
+  "mgm-studios",
+  "microsoft",
+  "moelis-company",
+  "nbc",
+  "oaktree-capital-management",
+  "oracle",
+  "paramount-pictures",
+  "pwc",
+  "qatalyst-partners",
+  "redfin",
+  "roland-berger",
+  "rothschild-co",
+  "salesforce",
+  "santander",
+  "sap",
+  "sixth-street",
+  "snowflake",
+  "tesla",
+  "tiktok",
+  "ubs",
+  "vista-equity-partners",
+  "warner-music-group",
+  "wells-fargo",
+]);
+
+/** Whether this mark's real colours survive on the spread's white hover chip. */
+export function logoShowsColorOnLight(name: string): boolean {
+  return COLOUR_ON_LIGHT.has(logoSlug(name));
 }

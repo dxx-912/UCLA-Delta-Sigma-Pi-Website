@@ -7,8 +7,6 @@ export const AUTHOR_URL = "https://www.linkedin.com/in/dxing01/";
 export const INTEREST_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLScyq4kgcgPDDUnmNojYCpakMZR8ByP4IifddGMM4KGvrQ2m3g/viewform";
 
-/** Placeholder — chapter hasn't shared the Fall 2026 application link yet. */
-export const APPLICATION_URL = "#";
 
 export type NavChild = { label: string; href: string };
 export type NavGroup = { label: string; children: NavChild[] };

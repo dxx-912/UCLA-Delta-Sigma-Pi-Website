@@ -1,9 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import Placeholder from "@/components/Placeholder";
 import Reveal from "@/components/Reveal";
 import CompanyLogo from "@/components/CompanyLogo";
-import { logoFor, logoScaleFor } from "@/data/companyLogos";
+import {
+  logoFor,
+  logoScaleFor,
+  logoShowsColorOnLight,
+} from "@/data/companyLogos";
 import { heroHeadline, heroBody, industries } from "@/data/careers";
 
 export const metadata: Metadata = {
@@ -33,9 +36,14 @@ export default function CareersOverviewPage() {
               </Link>
             </p>
           </div>
-          <Placeholder
-            label="Photo — Skyscrapers (looking up)"
-            className="aspect-square w-full"
+          {/* Portrait source in a square slot, so object-cover trims the top
+              and bottom — the vanishing point stays centred. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/skyscrapers looking up .webp"
+            alt="Looking up at a cluster of glass office towers"
+            className="aspect-square w-full object-cover object-center"
+            loading="lazy"
           />
         </div>
       </section>
@@ -61,13 +69,17 @@ export default function CareersOverviewPage() {
                 own aspect ratio inside that uniform box. */}
             <div className="mt-10 grid grid-cols-3 items-center gap-x-6 gap-y-8 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7">
               {section.companies.map((company) => (
-                // `tone="light"` renders the mark black for this white section;
-                // the homepage spread renders the same file white on charcoal.
+                // `tone="light"` suits this white section; the homepage spread
+                // renders the same file white on charcoal. Marks whose own
+                // colours read on white keep them here, so this wall shows real
+                // brand colour wherever the asset supports it and falls back to
+                // black only where it doesn't.
                 <CompanyLogo
                   key={company}
                   name={company}
                   src={logoFor(company)}
                   scale={logoScaleFor(company)}
+                  showsColor={logoShowsColorOnLight(company)}
                   tone="light"
                   className="h-12"
                 />

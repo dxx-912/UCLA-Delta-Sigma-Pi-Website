@@ -1,4 +1,4 @@
-import { logoFor, logoScaleFor } from "./companyLogos";
+import { logoFor, logoScaleFor, logoShowsColorOnLight } from "./companyLogos";
 
 // Homepage "We send our brothers to..." logo spread — the company lists from the
 // Careers Overview page (data/careers.ts), regrouped into the four categories the
@@ -7,7 +7,7 @@ import { logoFor, logoScaleFor } from "./companyLogos";
 //
 // Logo assets resolve through `data/companyLogos.ts`, which the Careers Overview
 // walls share — so a company renders the identical file on both surfaces. Drop a
-// file into public/images/logos/ and list it there to swap a placeholder for the
+// file into the logo folder (see LOGO_DIR) and list it there to swap a placeholder for the
 // real mark; nothing in this file changes.
 
 export interface Company {
@@ -16,6 +16,12 @@ export interface Company {
   src?: string;
   /** Optical-size correction from data/companyLogos.ts; "" for most marks. */
   scale?: string;
+  /**
+   * Whether the file's own colours read on the spread's white hover chip. Marks
+   * that don't are flattened to black there instead of being left half-invisible
+   * — see `logoShowsColorOnLight` in data/companyLogos.ts.
+   */
+  showsColor?: boolean;
 }
 
 export interface LogoCategory {
@@ -31,7 +37,12 @@ export interface LogoCategory {
 }
 
 const names = (...list: string[]): Company[] =>
-  list.map((name) => ({ name, src: logoFor(name), scale: logoScaleFor(name) }));
+  list.map((name) => ({
+    name,
+    src: logoFor(name),
+    scale: logoScaleFor(name),
+    showsColor: logoShowsColorOnLight(name),
+  }));
 
 export const logoSpreadHeadline = "We send our brothers to...";
 
