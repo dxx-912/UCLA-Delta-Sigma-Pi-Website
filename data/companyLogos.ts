@@ -66,6 +66,7 @@ const LOGO_FILES: string[] = [
   "bank-of-america.svg",
   "barclays.svg",
   "bcg.svg",
+  "blackrock.svg",
   "blackstone.svg",
   "bny-mellon.png",
   "booz-allen-hamilton.svg",
@@ -79,6 +80,7 @@ const LOGO_FILES: string[] = [
   "disney.svg",
   "evercore.svg",
   "ey-parthenon.svg",
+  "general-atlantic.svg",
   "goldman-sachs.svg",
   "google.svg",
   "hbo.svg",
@@ -104,6 +106,7 @@ const LOGO_FILES: string[] = [
   "nbc.svg",
   "oaktree-capital-management.png",
   "okta.svg",
+  "oliver-wyman.svg",
   "oracle.svg",
   "paramount-pictures.svg",
   "perella-weinberg-partners.svg",
@@ -166,6 +169,7 @@ export function logoFor(name: string): string | undefined {
  */
 const LOGO_SCALE: Record<string, string> = {
   meta: "scale-125",
+  blackstone: "scale-[1.2]",
 };
 
 /** Extra sizing class for a company's mark, or "" when it needs no correction. */

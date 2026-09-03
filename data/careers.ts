@@ -48,6 +48,8 @@ export const industries: IndustrySection[] = [
       "Oaktree Capital Management",
       "Ares Management",
       "Vista Equity Partners",
+      "General Atlantic",
+      "BlackRock",
     ],
   },
   {
@@ -68,6 +70,7 @@ export const industries: IndustrySection[] = [
       "Booz Allen Hamilton",
       "Strategy&",
       "Roland Berger",
+      "Oliver Wyman",
     ],
   },
   {

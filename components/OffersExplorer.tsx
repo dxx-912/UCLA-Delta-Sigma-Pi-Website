@@ -13,12 +13,6 @@ import { clsx } from "./clsx";
 
 const TYPE_ORDER: OfferType[] = ["Full-Time", "Internship", "Entrepreneurship"];
 
-const TYPE_FILTERS: { label: string; value: "All" | OfferType }[] = [
-  { label: "All", value: "All" },
-  { label: "Full-Time", value: "Full-Time" },
-  { label: "Internships", value: "Internship" },
-];
-
 function Pill({
   active,
   onClick,
@@ -45,18 +39,10 @@ function Pill({
 
 export default function OffersExplorer() {
   const [year, setYear] = useState<string>("All");
-  const [industry, setIndustry] = useState<string>("All");
-  const [type, setType] = useState<"All" | OfferType>("All");
 
   const filtered = useMemo(
-    () =>
-      offers.filter(
-        (o) =>
-          (year === "All" || o.year === year) &&
-          (industry === "All" || o.category === industry) &&
-          (type === "All" || o.type === type),
-      ),
-    [year, industry, type],
+    () => offers.filter((o) => year === "All" || o.year === year),
+    [year],
   );
 
   // Group filtered records: year -> category -> type -> records[]
@@ -78,7 +64,7 @@ export default function OffersExplorer() {
   return (
     <div>
       {/* Filter bar */}
-      <div className="space-y-4 border-y border-neutral-200 py-6">
+      <div className="border-y border-neutral-200 py-6">
         <FilterRow label="Year">
           <Pill active={year === "All"} onClick={() => setYear("All")}>
             All years
@@ -86,31 +72,6 @@ export default function OffersExplorer() {
           {YEARS.map((yr) => (
             <Pill key={yr} active={year === yr} onClick={() => setYear(yr)}>
               {yr}
-            </Pill>
-          ))}
-        </FilterRow>
-        <FilterRow label="Industry">
-          <Pill active={industry === "All"} onClick={() => setIndustry("All")}>
-            All
-          </Pill>
-          {CATEGORIES.map((cat) => (
-            <Pill
-              key={cat}
-              active={industry === cat}
-              onClick={() => setIndustry(cat)}
-            >
-              {cat}
-            </Pill>
-          ))}
-        </FilterRow>
-        <FilterRow label="Type">
-          {TYPE_FILTERS.map((t) => (
-            <Pill
-              key={t.value}
-              active={type === t.value}
-              onClick={() => setType(t.value)}
-            >
-              {t.label}
             </Pill>
           ))}
         </FilterRow>
@@ -152,7 +113,7 @@ export default function OffersExplorer() {
 
         {grouped.length === 0 && (
           <p className="py-10 text-center text-sm text-neutral-500">
-            No offers match these filters.
+            No offers match this year.
           </p>
         )}
       </div>

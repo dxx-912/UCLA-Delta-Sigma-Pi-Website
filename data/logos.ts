@@ -64,7 +64,7 @@ export const logoCategories: LogoCategory[] = [
       "Sixth Street",
       "Santander",
       "Macquarie",
-      "BNY Mellon",
+      "BlackRock",
       // Column B
       "Evercore",
       "Lazard",
@@ -78,7 +78,7 @@ export const logoCategories: LogoCategory[] = [
       "KKR & Co.",
       "Oaktree Capital Management",
       "Ares Management",
-      "Vista Equity Partners",
+      "General Atlantic",
     ),
   },
   {

@@ -24,7 +24,7 @@ const stats = [
     number: 20,
     lead: <>+ Clubs.</>,
     prefix: "Active in ",
-    body: "Delta Sigma Pi is filled with industrious students, who are actively involved with and hold leadership positions in top business clubs on campus. Fun fact: the co-founders of Bruin Consulting and Bruin Asset Management are Delta Sigma Pi alumni!",
+    body: "Delta Sigma Pi is filled with industrious students, who are actively involved with and hold leadership positions in top business clubs on campus. Fun fact: the founders of Bruin Consulting, Bruin Asset Management, and Bruin Private Equity are Delta Sigma Pi alumni!",
   },
 ];
 
