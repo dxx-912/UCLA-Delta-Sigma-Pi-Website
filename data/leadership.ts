@@ -35,7 +35,7 @@ export const leadership: Officer[] = [
   {
     name: "Nikhil Mummalaneni",
     title: "VP Pledge Education",
-    bio: "4th-year student from San Diego, CA. This summer, he interned as a growth equity analyst at General Atlantic, and last summer at Sixth Street. Nikhil is also the Vice President of Bruin Asset Management, UCLA's Undergraduate Business Society, and is Co-President of Bruin Private Equity. He loves to play basketball and poker in his free time.",
+    bio: "4th-year student from San Diego, CA. This summer, he interned as a growth equity analyst at General Atlantic, and last summer at Sixth Street. Nikhil is the Vice President of Bruin Asset Management, Vice President of UCLA's Undergraduate Business Society, and Co-President of Bruin Private Equity. He loves to play basketball and poker in his free time.",
     photo: "/Headshots/cropped/Nikhil Mummalaneni.jpg",
     linkedin: "https://www.linkedin.com/in/nikhil-mummalaneni/",
   },
