@@ -49,7 +49,7 @@ export const leadership: Officer[] = [
   {
     name: "Jun Moon",
     title: "VP Pledge Education",
-    bio: "3rd year from Newton, MA. This summer, he was a product management intern at the Federal Reserve Bank of Boston. Next summer, he will join BlackRock as a PMM intern in San Francisco. Jun is the Internal Vice President of Bruin Strategy and Internal Vice President of the Data Science Union. He loves to play basketball and sing/listen to music in his free time.",
+    bio: "3rd year from Newton, MA. This summer, he was a product management intern at the Federal Reserve Bank of Boston. Next summer, he will join BlackRock as a PMM intern in San Francisco. Jun is the Internal Vice President of Bruin Strategy Network and also part of the Data Science Union. He loves to play basketball and sing/listen to music in his free time.",
     photo: "/Headshots/cropped/Jun Moon.jpg",
     linkedin: "https://www.linkedin.com/in/junhmoon/",
   },
@@ -77,7 +77,7 @@ export const leadership: Officer[] = [
   {
     name: "Dylan Loh",
     title: "Senior Vice President",
-    bio: "3rd-year Cognitive Science major from Fullerton, California. This summer, Dylan interned as a Business Management Analyst at Northrup Gunman and will be joining the Boston Consulting Group as a summer analyst next summer. In his free time, Dylan likes working out, swimming, and self-improvement.",
+    bio: "3rd-year Cognitive Science major from Fullerton, California. This summer, Dylan interned as a Business Management Analyst at Northrup Grumman and will be joining the Boston Consulting Group as a summer analyst next summer. In his free time, Dylan likes working out, swimming, and self-improvement.",
     photo: "/Headshots/cropped/Dylan Loh.jpg",
     linkedin: "https://www.linkedin.com/in/dylan-loh1201/",
   },
