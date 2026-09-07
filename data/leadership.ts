@@ -133,7 +133,7 @@ export const leadership: Officer[] = [
   {
     name: "Taey Traisorat",
     title: "VP Chapter Operations",
-    bio: "Bio coming soon.",
+    bio: "3rd-year Economics and Cognitive Science student from Thailand. She spent her summer as a Global Strategic Partnerships intern at Westfield and was previously a Research Assistant at Boston Consulting Group. She also runs a side jewelry business in Thailand, Trai Collection. In her free time, she indulges in the art of eating, and painting.",
     photo: "/Headshots/cropped/Taey Traisorat.jpg",
     linkedin: "https://www.linkedin.com/in/primtraisorat/",
   },
