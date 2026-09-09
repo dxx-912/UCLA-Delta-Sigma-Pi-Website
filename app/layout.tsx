@@ -41,9 +41,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-body text-ink antialiased">
+      {/* Column layout so short pages (e.g. the Leadership cover) still push
+          the footer to the bottom of the viewport instead of leaving a white gap. */}
+      <body className="flex min-h-screen flex-col font-body text-ink antialiased">
         <Nav />
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
         {/* In the root layout, so every route is tracked without per-page setup. */}
         <Analytics />
