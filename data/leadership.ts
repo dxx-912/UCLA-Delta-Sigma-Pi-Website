@@ -1,6 +1,6 @@
-// 2026-2027 Executive Board. Headshots and bios pending — placeholders are used
-// until real photos/descriptions are provided (Section 8). Order follows the
-// board roster provided by the chapter.
+// 2026-2027 Executive Board — 14 officers. Order and titles follow the board
+// roster provided by the chapter; `Placeholder` still covers anyone without a
+// headshot on file.
 //
 // `linkedin` is cross-referenced by name against data/actives.ts (11+ officers
 // are also active brothers) rather than a second chapter-provided list.
@@ -55,7 +55,7 @@ export const leadership: Officer[] = [
   },
   {
     name: "Veronica Yang",
-    title: "Director of Marketing",
+    title: "VP Chapter Operations",
     bio: "3rd-year student from the Bay Area studying Cognitive Science. This summer, Veronica interned in Digital Marketing at Corsair, and last summer she worked in Product Marketing at ASUS. Outside of school, Veronica enjoys baking, exploring cafés, attending music festivals, and playing badminton.",
     photo: "/Headshots/cropped/Veronica Yang.jpg",
     linkedin: "https://www.linkedin.com/in/veronicayang23/",
@@ -68,11 +68,11 @@ export const leadership: Officer[] = [
     linkedin: "https://www.linkedin.com/in/dxing01/",
   },
   {
-    name: "Kelly Hu",
+    name: "Kiera Wang",
     title: "Director of Marketing",
-    bio: "2nd-year student from Beijing studying Statistics and Data Science. Kelly is currently interning at the Nobel Sustainability Trust and is interested in pursuing a career in product management. Kelly enjoys eating, taking photos, and trying new restaurants in her free time.",
-    photo: "/Headshots/cropped/Kelly Hu.jpg",
-    linkedin: "https://www.linkedin.com/in/kelly-grace-hu/",
+    bio: "3rd-year student from Taipei, Shanghai & Beijing double majoring in Cognitive Science and Economics. She spent this past summer as an AI & Data Consulting intern at Deloitte. At UCLA, she works in the Career Strategy Team at the Anderson School of Management. Apart from professional aspirations, she enjoys going on dates with Martin from CORTIS, James from CORTIS, and Keonho from CORTIS.",
+    photo: "/Headshots/cropped/Kiera Wang.jpg",
+    linkedin: "https://www.linkedin.com/in/kierawang/",
   },
   {
     name: "Dylan Loh",
@@ -82,67 +82,11 @@ export const leadership: Officer[] = [
     linkedin: "https://www.linkedin.com/in/dylan-loh1201/",
   },
   {
-    name: "Cameron Loh",
-    title: "VP Scholarship & Awards",
-    bio: "Bio coming soon.",
-    photo: "/Headshots/cropped/Cameron Loh.jpg",
-    linkedin: "https://www.linkedin.com/in/cloh1201/",
-  },
-  {
-    name: "Iris Zeng",
-    title: "Director of Brotherhood",
-    bio: "2nd-year Business Economics major from the Bay Area. Iris is actively pursuing a career in banking and finance and is also a part of the Bruin Hedge Fund. In her free time, she likes to play tennis, go hiking, and travel to different countries.",
-    photo: "/Headshots/cropped/Iris Zeng.jpg",
-    linkedin: "https://www.linkedin.com/in/iristyzeng/",
-  },
-  {
-    name: "Kiera Wang",
-    title: "VP Community Service",
-    bio: "3rd-year student from Taipei, Shanghai & Beijing double majoring in Cognitive Science and Economics. She spent this past summer as an AI & Data Consulting intern at Deloitte. At UCLA, she works in the Career Strategy Team at the Anderson School of Management. Apart from professional aspirations, she enjoys going on dates with Martin from CORTIS, James from CORTIS, and Keonho from CORTIS.",
-    photo: "/Headshots/cropped/Kiera Wang.jpg",
-    linkedin: "https://www.linkedin.com/in/kierawang/",
-  },
-  {
-    name: "Yujin Baik",
-    title: "VP Alumni Relations",
-    bio: "2nd-year student from South Korea studying Business Economics. This summer, Yujin interned at MD Global Partners in New York. Yujin is interested in pursuing a career in investment banking. Yujin's hobbies include weightlifting, golf, basketball, and volleyball.",
-    photo: "/Headshots/cropped/Yujin Baik.jpg",
-    linkedin: "https://www.linkedin.com/in/yujin-baik/",
-  },
-  {
-    name: "Kijoo Song",
-    title: "Director of Finance",
-    bio: "2nd-year student from New York studying Statistics & Data Science. This past summer, Kijoo worked as a GTM Strategy Intern for Blue Modern Advisory, and as a product manager for a healthtech startup. Kijoo is part of 180 Degrees Consulting, and his hobbies include bowling, movies, karaoke, and BeReal.",
-    photo: "/Headshots/cropped/Kijoo Song.jpg",
-    linkedin: "https://www.linkedin.com/in/kijoosong/",
-  },
-  {
-    name: "Eleanor Lee",
-    title: "Director of Finance",
-    bio: "2nd-year Economics and Cognitive Science student from Los Angeles. She spent her summer as an investment banking intern at The Amazing Group while building her sustainable swimwear brand, Deadstock Swim. Apart from her professional identity, she is an excellent dancer, thrift goddess, and NeeDoh aficionado.",
-    photo: "/Headshots/cropped/Eleanor Lee.jpg",
-    linkedin: "https://www.linkedin.com/in/eleanor-lee06/",
-  },
-  {
     name: "Brenda Nguyen",
-    title: "VP Chapter Operations",
+    title: "Director of Brotherhood",
     bio: "3rd-year student from Huntington Beach, CA studying Economics with a Real Estate Minor. Brenda is pursuing a career in real estate finance and interned at CIM Group this summer as a Real Estate Investments Intern. In her free time, Brenda loves golfing and exploring new food/coffee shops.",
     photo: "/Headshots/cropped/Brenda Nguyen.jpg",
     linkedin: "https://www.linkedin.com/in/bbrendanguyen/",
-  },
-  {
-    name: "Taey Traisorat",
-    title: "VP Chapter Operations",
-    bio: "3rd-year Economics and Cognitive Science student from Thailand. She spent her summer as a Global Strategic Partnerships intern at Westfield and was previously a Research Assistant at Boston Consulting Group. She also runs a side jewelry business in Thailand, Trai Collection. In her free time, she indulges in the art of eating, and painting.",
-    photo: "/Headshots/cropped/Taey Traisorat.jpg",
-    linkedin: "https://www.linkedin.com/in/primtraisorat/",
-  },
-  {
-    name: "Alain Izawa",
-    title: "VP Professional Activities",
-    bio: "Bio coming soon.",
-    photo: "/Headshots/cropped/Alain Izawa.jpg",
-    linkedin: "https://www.linkedin.com/in/alain-izawa/",
   },
   {
     name: "Hugo Hiramatsu",
@@ -157,5 +101,19 @@ export const leadership: Officer[] = [
     bio: "2nd-year student from the Bay Area studying Business Economics and Cognitive Science. This summer, Vikram interned at Carrum Health in San Francisco, and it also apart of Bruin Strategy Network. Vikram enjoys playing pickleball, hunting for the best dessert lattes, traveling, and trophy-farming on Brawl Stars.",
     photo: "/Headshots/cropped/Vikram Dawar.jpg",
     linkedin: "https://www.linkedin.com/in/vikramdawar/",
+  },
+  {
+    name: "Yujin Baik",
+    title: "VP Professional Activities",
+    bio: "2nd-year student from South Korea studying Business Economics. This summer, Yujin interned at MD Global Partners in New York. Yujin is interested in pursuing a career in investment banking. Yujin's hobbies include weightlifting, golf, basketball, and volleyball.",
+    photo: "/Headshots/cropped/Yujin Baik.jpg",
+    linkedin: "https://www.linkedin.com/in/yujin-baik/",
+  },
+  {
+    name: "Kelly Hu",
+    title: "VP Community Service",
+    bio: "2nd-year student from Beijing studying Statistics and Data Science. Kelly is currently interning at the Nobel Sustainability Trust and is interested in pursuing a career in product management. Kelly enjoys eating, taking photos, and trying new restaurants in her free time.",
+    photo: "/Headshots/cropped/Kelly Hu.jpg",
+    linkedin: "https://www.linkedin.com/in/kelly-grace-hu/",
   },
 ];
