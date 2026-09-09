@@ -1,4 +1,4 @@
-// 2026-2027 Executive Board — 14 officers. Order and titles follow the board
+// 2026-2027 Executive Board — 16 officers. Order and titles follow the board
 // roster provided by the chapter; `Placeholder` still covers anyone without a
 // headshot on file.
 //
@@ -115,5 +115,19 @@ export const leadership: Officer[] = [
     bio: "2nd-year student from Beijing studying Statistics and Data Science. Kelly is currently interning at the Nobel Sustainability Trust and is interested in pursuing a career in product management. Kelly enjoys eating, taking photos, and trying new restaurants in her free time.",
     photo: "/Headshots/cropped/Kelly Hu.jpg",
     linkedin: "https://www.linkedin.com/in/kelly-grace-hu/",
+  },
+  {
+    name: "Kijoo Song",
+    title: "Director of Finance",
+    bio: "2nd-year student from New York studying Statistics & Data Science. This past summer, Kijoo worked as a GTM Strategy Intern for Blue Modern Advisory, and as a product manager for a healthtech startup. Kijoo is part of 180 Degrees Consulting, and his hobbies include bowling, movies, karaoke, and BeReal.",
+    photo: "/Headshots/cropped/Kijoo Song.jpg",
+    linkedin: "https://www.linkedin.com/in/kijoosong/",
+  },
+  {
+    name: "Eleanor Lee",
+    title: "Director of Finance",
+    bio: "2nd-year Economics and Cognitive Science student from Los Angeles. She spent her summer as an investment banking intern at The Amazing Group while building her sustainable swimwear brand, Deadstock Swim. Apart from her professional identity, she is an excellent dancer, thrift goddess, and NeeDoh aficionado.",
+    photo: "/Headshots/cropped/Eleanor Lee.jpg",
+    linkedin: "https://www.linkedin.com/in/eleanor-lee06/",
   },
 ];
