@@ -1,6 +1,7 @@
 // Recruitment timeline milestones for the Join Us page. Event names, order,
-// attire, and exclusivity are final; dates/times/locations aren't finalized yet
-// for the events that are open to all rushees, so those stay TBD placeholders.
+// attire, exclusivity, and dates (one event per day, Sept 28 – Oct 2, 2026) are
+// final; times/locations aren't finalized yet for the events that are open to
+// all rushees, so those stay TBD placeholders.
 // Invite-only events don't disclose a time or location publicly.
 
 export interface RecruitmentMilestone {
@@ -14,21 +15,21 @@ export interface RecruitmentMilestone {
 
 export const recruitmentMilestones: RecruitmentMilestone[] = [
   {
-    date: "Date: TBD",
+    date: "Monday, September 28",
     title: "Meet the Chapter",
     attire: "Casual",
     time: "TBD",
     location: "TBD",
   },
   {
-    date: "Date: TBD",
+    date: "Tuesday, September 29",
     title: "Social Night",
     attire: "Casual",
     time: "TBD",
     location: "TBD",
   },
   {
-    date: "Date: TBD",
+    date: "Wednesday, September 30",
     title: "Professional Night",
     attire: "Business Professional",
     time: "TBD",
@@ -36,7 +37,7 @@ export const recruitmentMilestones: RecruitmentMilestone[] = [
     inviteOnly: true,
   },
   {
-    date: "Date: TBD",
+    date: "Thursday, October 1",
     title: "Aftermath",
     attire: "Casual",
     time: "TBD",
@@ -44,7 +45,7 @@ export const recruitmentMilestones: RecruitmentMilestone[] = [
     inviteOnly: true,
   },
   {
-    date: "Date: TBD",
+    date: "Friday, October 2",
     title: "Bid Interviews",
     attire: "Business Professional",
     time: "TBD",
