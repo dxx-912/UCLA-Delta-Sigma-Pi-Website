@@ -39,7 +39,7 @@ export default function JoinUsPage() {
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-sm text-white/70">
             Fall 2026 recruitment runs September 28 – October 2 — check back
-            soon for exact times and locations.
+            soon for locations.
           </p>
           <div className="mt-14">
             <RecruitmentTimeline />

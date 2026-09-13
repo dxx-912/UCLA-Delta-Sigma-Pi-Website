@@ -28,11 +28,11 @@ export default function RecruitmentTimeline() {
               <p className="mt-1.5 text-[13px] leading-relaxed text-white/70">
                 <span className="font-bold text-white">Attire:</span>{" "}
                 {milestone.attire}
-                {!milestone.inviteOnly && (
+                <span className="mx-2 text-white/30">|</span>
+                <span className="font-bold text-white">Time:</span>{" "}
+                {milestone.time}
+                {milestone.location && (
                   <>
-                    <span className="mx-2 text-white/30">|</span>
-                    <span className="font-bold text-white">Time:</span>{" "}
-                    {milestone.time}
                     <span className="mx-2 text-white/30">|</span>
                     <span className="font-bold text-white">Location:</span>{" "}
                     {milestone.location}

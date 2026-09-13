@@ -1,15 +1,16 @@
 // Recruitment timeline milestones for the Join Us page. Event names, order,
-// attire, exclusivity, and dates (one event per day, Sept 28 – Oct 2, 2026) are
-// final; times/locations aren't finalized yet for the events that are open to
-// all rushees, so those stay TBD placeholders.
-// Invite-only events don't disclose a time or location publicly.
+// attire, exclusivity, dates (one event per day, Sept 28 – Oct 2, 2026), and
+// times are final — Mon–Thu run 7–9 PM, and Friday's Bid Interviews depend on
+// each candidate's scheduled slot. Locations aren't finalized yet, so those
+// stay TBD placeholders. Bid Interviews doesn't disclose a location publicly.
 
 export interface RecruitmentMilestone {
   date: string;
   title: string;
   attire: string;
   time: string;
-  location: string;
+  /** Omit to hide the Location field on the card. */
+  location?: string;
   inviteOnly?: boolean;
 }
 
@@ -18,21 +19,21 @@ export const recruitmentMilestones: RecruitmentMilestone[] = [
     date: "Monday, September 28",
     title: "Meet the Chapter",
     attire: "Casual",
-    time: "TBD",
+    time: "7:00–9:00 PM",
     location: "TBD",
   },
   {
     date: "Tuesday, September 29",
     title: "Social Night",
     attire: "Casual",
-    time: "TBD",
+    time: "7:00–9:00 PM",
     location: "TBD",
   },
   {
     date: "Wednesday, September 30",
     title: "Professional Night",
     attire: "Business Professional",
-    time: "TBD",
+    time: "7:00–9:00 PM",
     location: "TBD",
     inviteOnly: true,
   },
@@ -40,7 +41,7 @@ export const recruitmentMilestones: RecruitmentMilestone[] = [
     date: "Thursday, October 1",
     title: "Aftermath",
     attire: "Casual",
-    time: "TBD",
+    time: "7:00–9:00 PM",
     location: "TBD",
     inviteOnly: true,
   },
@@ -48,8 +49,7 @@ export const recruitmentMilestones: RecruitmentMilestone[] = [
     date: "Friday, October 2",
     title: "Bid Interviews",
     attire: "Business Professional",
-    time: "TBD",
-    location: "TBD",
+    time: "Varies by interview slot",
     inviteOnly: true,
   },
 ];
