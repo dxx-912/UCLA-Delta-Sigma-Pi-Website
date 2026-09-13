@@ -270,8 +270,8 @@ export default function HomePage() {
               Follow our journey on Instagram
             </h2>
           </Reveal>
-          {/* Order is the chapter's file numbering, left to right / top to
-              bottom — see data/instagram.ts. */}
+          {/* Newest post first, left to right / top to bottom — see
+              data/instagram.ts. */}
           <Reveal className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
             {instagramPosts.map((post) => (
               /* eslint-disable-next-line @next/next/no-img-element */
