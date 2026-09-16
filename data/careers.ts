@@ -86,7 +86,7 @@ export const industries: IndustrySection[] = [
       "Apple",
       "Amazon",
       "Twitter",
-      "Hulu",
+      "NVIDIA",
       "Intel",
       "Salesforce",
       "TikTok",

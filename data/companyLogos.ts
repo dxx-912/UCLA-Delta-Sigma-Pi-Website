@@ -104,6 +104,7 @@ const LOGO_FILES: string[] = [
   "moelis-company.png",
   "morgan-stanley.svg",
   "nbc.svg",
+  "nvidia.svg",
   "oaktree-capital-management.png",
   "okta.svg",
   "oliver-wyman.svg",
