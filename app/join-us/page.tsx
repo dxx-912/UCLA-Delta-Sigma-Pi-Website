@@ -32,17 +32,27 @@ export default function JoinUsPage() {
 
       {/* Recruitment timeline — separated into its own dark band, matching the
           homepage's charcoal sections */}
-      <section className="bg-charcoal py-20 text-white">
-        <div className="mx-auto max-w-[1100px] px-6">
+      <section className="bg-charcoal py-20 text-white [zoom:0.8]">
+        <div className="mx-auto max-w-[1500px] px-6">
           <h2 className="text-center font-display text-2xl font-bold sm:text-3xl">
             Recruitment Timeline
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-sm text-white/70">
-            Fall 2026 recruitment runs September 28 – October 2 — check back
-            soon for locations.
+            Fall 2026 recruitment runs September 28 – October 2
           </p>
-          <div className="mt-14">
-            <RecruitmentTimeline />
+          <div className="mt-14 grid gap-8 lg:grid-cols-2 lg:items-stretch">
+            <div className="overflow-hidden rounded-md border border-white/15 bg-white/5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/recruitment flyer.jpeg"
+                alt="UCLA Delta Sigma Pi Fall 2026 recruitment flyer"
+                className="h-full w-full object-contain"
+                loading="lazy"
+              />
+            </div>
+            <div className="rounded-md border border-white/15 bg-white/5 p-8">
+              <RecruitmentTimeline />
+            </div>
           </div>
         </div>
       </section>

@@ -1,8 +1,8 @@
 // Recruitment timeline milestones for the Join Us page. Event names, order,
 // attire, exclusivity, dates (one event per day, Sept 28 – Oct 2, 2026), and
 // times are final — Mon–Thu run 7–9 PM, and Friday's Bid Interviews depend on
-// each candidate's scheduled slot. Locations aren't finalized yet, so those
-// stay TBD placeholders. Bid Interviews doesn't disclose a location publicly.
+// each candidate's scheduled slot. Professional Night and Aftermath don't
+// disclose a location publicly (invite-only); Bid Interviews doesn't either.
 
 export interface RecruitmentMilestone {
   date: string;
@@ -20,21 +20,20 @@ export const recruitmentMilestones: RecruitmentMilestone[] = [
     title: "Meet the Chapter",
     attire: "Casual",
     time: "7:00–9:00 PM",
-    location: "TBD",
+    location: "Young Hall 4222C",
   },
   {
     date: "Tuesday, September 29",
     title: "Social Night",
     attire: "Casual",
     time: "7:00–9:00 PM",
-    location: "TBD",
+    location: "Young Hall 4222C",
   },
   {
     date: "Wednesday, September 30",
     title: "Professional Night",
     attire: "Business Professional",
     time: "7:00–9:00 PM",
-    location: "TBD",
     inviteOnly: true,
   },
   {
@@ -42,7 +41,6 @@ export const recruitmentMilestones: RecruitmentMilestone[] = [
     title: "Aftermath",
     attire: "Casual",
     time: "7:00–9:00 PM",
-    location: "TBD",
     inviteOnly: true,
   },
   {
