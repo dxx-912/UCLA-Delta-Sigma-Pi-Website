@@ -25,11 +25,23 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
+# local env files (any .env variant; secrets must never be committed)
+.env
+.env.*
+!.env.example
 .env*.local
 
 # vercel
 .vercel
+
+# Claude Code local settings/permissions (personal, machine-specific)
+.claude/
+
+# editor / OS / keys
+*.key
+*.p12
+.idea/
+.vscode/
 
 # typescript
 *.tsbuildinfo
