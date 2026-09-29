@@ -1,32 +1,26 @@
-# UCLADSP-Website
+# UCLA DSP Website
 
-Website for UCLA Delta Sigma Pi, Xi Omicron chapter (ucladsp.com) — a Next.js
-rebuild of the chapter's site.
+Website for the Xi Omicron chapter of Delta Sigma Pi at UCLA, rebuilt in Next.js. 
 
-## Getting started
+Live site: www.ucladsp.com
 
-```bash
-npm install
-npm run dev      # http://localhost:3000
-```
-
-## Scripts
-
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the local dev server |
-| `npm run build` | Production build (type-checks + lints) |
-| `npm run start` | Serve the production build |
-| `npm run lint` | Run ESLint |
+![Home page](docs/home.png)
 
 ## Stack
 
-Next.js 14 (App Router) · TypeScript · Tailwind CSS · Framer Motion · deployed on Vercel.
+Next.js 14 (App Router), TypeScript, Tailwind CSS, Framer Motion, deployed on Vercel.
 
-## Editing content
+## Run it locally
 
-Chapter content lives in typed data files under [`data/`](./data) — update these to
-change the exec board, active roster, career offers, or FAQ without editing page
-layout. All photos, headshots, and logos are clearly-labeled placeholders waiting
-for the real assets to be dropped in. See [CLAUDE.md](./CLAUDE.md) for architecture
-notes.
+```
+npm install
+npm run dev
+```
+
+Then open http://localhost:3000. Other commands:
+
+* `npm run build` makes a production build and runs type checks and lint
+* `npm run start` serves the production build
+* `npm run lint` runs ESLint
+
+Built by Daniel Xing, Director of Marketing at DSP. linkedin.com/in/dxing01/?isSelfProfile=true
