@@ -107,4 +107,5 @@ export const clubs: Club[] = [
   ),
   club("Data Science Union", "dsu logo.png", "https://datascienceunion.com/"),
   club("ACM at UCLA", "acm ucla.png", "https://www.uclaacm.com/"),
+  club("Bruin AI", "bruin ai logo.jpeg", "https://bruinai.org/"),
 ];
