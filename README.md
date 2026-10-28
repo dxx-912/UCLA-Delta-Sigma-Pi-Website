@@ -23,4 +23,4 @@ Then open http://localhost:3000. Other commands:
 * `npm run start` serves the production build
 * `npm run lint` runs ESLint
 
-Built by Daniel Xing, Director of Marketing at DSP. linkedin.com/in/dxing01/?isSelfProfile=true
+Built by Daniel Xing, Director of Marketing at DSP. linkedin.com/in/dxing01/
